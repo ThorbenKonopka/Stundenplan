@@ -1,0 +1,9 @@
+*.aux
+*.toc
+*.log
+*.out
+*.synctex.gz
+*.tmp
+*.glo
+*.ist
+~$*
