@@ -254,8 +254,14 @@ Ein Dozent ist maßgeblich an der Terminfindung beteiligt. Bestimmte Richtlinien
 	& - \\
 	\hline
 	FA-
-	& Wenn ein angemeldeter Dozent einen neuen Termin anlegt und die Veranstaltung ausgewählt hat, \textbf{MUSS} das System den Benutzer die Möglichkeit geben, die restlichen Daten\footnote{Start- und Endzeit, Raumnummer, Link für die Vorlesung} einzutragen. 
+	& Wenn ein angemeldeter Dozent einen neuen Termin anlegt und die Veranstaltung ausgewählt hat, \textbf{MUSS} das System den Benutzer die Möglichkeit geben, die restlichen Daten (Start- und Endzeit, Raumnummer, Link für die Vorlesung) einzutragen. 
 	& - \\
+	\hline
+\end{tabular}
+	
+\begin{tabular} {|p{1,1cm}|p{11cm}|p{2,7cm}|}
+	\hline
+	ID & Anforderung & Kriterien \\
 	\hline
 	FA-
 	& Wenn ein angemeldeter Dozent alle benötigten Daten eingegeben hat, \textbf{MUSS} das System verifizieren, dass der neue Termin in einem freien Zeitraum liegt.
@@ -271,6 +277,10 @@ Ein Dozent ist maßgeblich an der Terminfindung beteiligt. Bestimmte Richtlinien
 	\hline
 	FA-
 	& Wenn ein angemeldeter Dozent mindestens einen Termin angelegt hat, \textbf{MUSS} das System dem Dozenten die Möglichkeit geben den Vorschlag freizugeben, damit ein Verwalter diesen einsehen kann.
+	& - \\
+	\hline
+	FA-
+	& Ein Dozent \textbf{MUSS} einen seiner angelegten Termine im Nachhinein bezüglich der Raumnummer oder des Links zur Online-Veranstaltung selbst ändern können.
 	& - \\
 	\hline
 \end{tabular}
@@ -378,7 +388,57 @@ Ein angemeldeter Student oder ein unangemeldeter Benutzer darf unter keinen Umst
 
 \subsubsection{Angemeldeter Dozent}
 
+Ein Dozent darf Termine in ihrer Uhrzeit selbst verschieben, soll aber für Änderungen am Datum eines Termins immer die Verwaltung anfragen müssen.
+
+\vspace{12pt}
+
+\begin{tabular} {|p{1,1cm}|p{11cm}|p{2,7cm}|}
+	\hline
+	ID & Anforderung & Kriterien \\
+	\hline
+	FA-
+	& Ein Dozent \textbf{MUSS} die Uhrzeit eines Termins ändern können.
+	& - \\
+	\hline
+	FA-
+	& Ein Dozent \textbf{DARF NICHT} selbst das Datum eines Termins ändern.
+	& - \\
+	\hline
+	FA-
+	& Ein Dozent \textbf{MUSS} eine Anfrage zum Ändern des Datums eines Termins an die Verwaltung stellen können.
+	& - \\
+	\hline
+\end{tabular}
+
+\vspace{12pt}
+
 \subsubsection{Angemeldeter Verwalter}
+
+Ein Verwalter darf Termine selbst beliebig verschieben und muss die von Dozenten gestellten Anfragen bearbeiten können. Ebenfalls muss der Verwalter die von Dozenten selbst durchgeführten Verschiebungen kontrollieren können.
+
+\vspace{12pt}
+
+\begin{tabular} {|p{1,1cm}|p{11cm}|p{2,7cm}|}
+	\hline
+	ID & Anforderung & Kriterien \\
+	\hline
+	FA-
+	& Ein Verwalter \textbf{MUSS} einen Termin in seiner Uhrzeit und seinem Datum verschieben können.
+	& - \\
+	\hline
+	FA-
+	& Ein Verwalter \textbf{MUSS} die gestellten Datumsänderungsanfragen von Dozenten einsehen können.
+	& - \\
+	\hline
+	FA-
+	& Ein Verwalter \textbf{MUSS} die Verschiebe-Anfragen von Dozenten annehmen oder ablehnen können, je nachdem, ob sich diese mit anderen Terminen überschneiden oder durch den neuen Termin Richtlinien verletzt werden würden.
+	& - \\
+	\hline
+	FA-
+	& Ein Verwalter \textbf{MUSS} die durchgeführten Uhrzeitänderungen von Dozenten einsehen können und diese rückgängig machen, falls diese zu Konflikten führen.
+	& - \\
+	\hline
+\end{tabular}
 
 \newpage
 
