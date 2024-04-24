@@ -330,7 +330,7 @@ Ein angemeldeter Student oder ein unangemeldeter Benutzer darf unter keinen Umst
 
 \subsubsection{Angemeldeter Dozent}
 
-\subsubsection{Angemeldeter Vertreter}
+\subsubsection{Angemeldeter Verwalter}
 
 \newpage
 
@@ -383,3 +383,240 @@ Ein unangemeldeter Benutzer darf unter keinen Umständen die Fehlzeiten von ande
 \subsubsection{Angemeldeter Dozent}
 
 \subsubsection{Angemeldeter Verwalter}
+
+\newpage
+
+\subsection{Benutzer verwalten}
+\begin{tabular} {|p{1,1cm}|p{11cm}|p{2,7cm}|}
+	\hline
+	ID & Anforderung & Kriterien \\
+	\hline
+	FA-
+	& Ein Verwalter \textbf{MUSS} neue Benutzerkonten anlegen können. 
+	& - \\
+	\hline
+	FA-
+	& Das System \textbf{MUSS} die Erstellung von Benutzerkonten innerhalb von 5 Sekunden nach Eingabe der erforderlichen Daten ermöglichen, um eine schnelle Einrichtung zu gewährleisten. 
+	& - \\ 
+	\hline
+	FA-
+	& Das System \textbf{SOLL} bei der Erstellung von Benutzerkonten eine SSL-verschlüsselte Verbindung verwenden, um die Sicherheit der Daten zu gewährleisten.
+	& - \\ 
+	\hline
+	FA-
+	& Das System \textbf{MUSS} Verwaltern die Aktualisierung von Benutzerinformationen wie Name, E-Mail-Adresse und Rolle ermöglichen.
+	& - \\ 
+	\hline
+	FA-
+	& Das System \textbf{MUSS} sicherstellen, dass Änderungen an Benutzerkonten entsprechend den Datenschutzrichtlinien protokolliert werden.
+	& - \\ 
+	\hline
+	FA-
+	& Das System \textbf{SOLL} eine benutzerfreundliche Schnittstelle zur Aktualisierung von Benutzerinformationen bieten, die ohne spezielle Schulung bedienbar ist.
+	& - \\ 
+	\hline
+	FA-
+	& Wenn ein Verwalter ein Benutzerkonto löschen möchte, \textbf{SOLL} das System eine Bestätigung einholen, um unbeabsichtigte Löschungen zu vermeiden.
+	& - \\ 
+	\hline
+	FA-
+	& Das System \textbf{MUSS} gelöschte Benutzerdaten gemäß den gesetzlichen Aufbewahrungsfristen speichern, bevor sie endgültig entfernt werden.
+	& - \\ 
+	\hline
+	FA-
+	& Das System \textbf{SOLL} regelmäßig Backups der Benutzerdaten erstellen, um Datenverlust bei einem Fehler zu verhindern.
+	& - \\ 
+	\hline
+	FA-
+	& Das System \textbf{MUSS} die Bestätigungsanforderung klar und verständlich darstellen, um Fehlbedienungen zu minimieren.
+	& - \\ 
+	\hline
+\end{tabular}
+
+\newpage
+
+\begin{tabular} {|p{1,1cm}|p{11cm}|p{2,7cm}|}
+	\hline
+	ID & Anforderung & Kriterien \\
+	\hline
+	FA-
+	& Das System \textbf{MUSS} allen Akteuren außer dem Gast  ermöglichen, Passwörter für Benutzerkonten zurückzusetzen. 
+	& - \\
+	\hline
+	FA-
+	& Das System \textbf{MUSS} einen sicheren Prozess für das Zurücksetzen von Passwörtern bieten, einschließlich der Bestätigung durch eine Zwei-Faktor-Authentifizierung. 
+	& - \\
+	\hline
+	FA-
+	& Das System \textbf{SOLL} in der Lage sein, das Zurücksetzen von Passwörtern innerhalb von 60 Sekunden durchzuführen. 
+	& - \\
+	\hline
+	FA-
+	& Das System \textbf{SOLL} bei der Passwortrücksetzung starke Passwörter gemäß den aktuellen Sicherheitsstandards erzwingen. 
+	& - \\
+	\hline
+\end{tabular}
+
+%\newpage
+\vspace{18pt}
+
+\subsection{Veranstaltungen verwalten}
+\begin{tabular} {|p{1,1cm}|p{11cm}|p{2,7cm}|}
+	\hline
+	ID & Anforderung & Kriterien \\
+	\hline
+	FA-
+	& Das System \textbf{SOLL} dem Verwalter ermöglichen, neue Veranstaltungen mit Details hinzuzufügen. 
+	& - \\
+	\hline
+	FA-
+	& Das System \textbf{MUSS} die Erstellung neuer Veranstaltungen innerhalb von maximal 10 Sekunden ermöglichen, um eine effiziente Verwaltung zu gewährleisten. 
+	& - \\
+	\hline
+	FA-
+	& Das System \textbf{MUSS} sicherstellen, dass Veranstaltungsdaten über sichere Protokolle (wie HTTPS) übertragen werden, um die Integrität und Vertraulichkeit der Informationen zu schützen. 
+	& - \\
+	\hline
+	FA-
+	& Das System \textbf{SOLL} in der Lage sein, eine unbegrenzte Anzahl von Veranstaltungen zu unterstützen, ohne an Leistung zu verlieren. 
+	& - \\
+	\hline
+	FA-
+	& Das System \textbf{MUSS} das Bearbeiten von Veranstaltungsdetails durch den Verwalter ermöglichen. 
+	& - \\
+	\hline
+	FA-
+	& Das System \textbf{MUSS} Änderungen an Veranstaltungsdetails sofort in allen abhängigen Systemen und Ansichten aktualisieren, um Konsistenz zu gewährleisten. 
+	& - \\
+	\hline
+	FA-
+	& Das System \textbf{MUSS} Benutzerschnittstellen bereitstellen, die intuitiv und ohne zusätzliche Schulung zu bedienen sind. 
+	& - \\
+	\hline
+\end{tabular}
+
+\newpage
+
+\begin{tabular} {|p{1,1cm}|p{11cm}|p{2,7cm}|}
+	\hline
+	ID & Anforderung & Kriterien \\
+	\hline
+	FA-
+	& Das System \textbf{SOLL} dem Verwalter ermöglichen, Veranstaltungen aus dem System zu entfernen. 
+	& - \\
+	\hline
+	FA-
+	& Das System \textbf{MUSS} eine Warnmeldung anzeigen und eine Bestätigung verlangen, bevor eine Veranstaltung endgültig gelöscht wird, um unbeabsichtigte Löschungen zu verhindern. 
+	& - \\
+	\hline
+	FA-
+	& Das System \textbf{SOLL} gelöschte Veranstaltungen in einem Archiv für einen definierten Zeitraum speichern, um eine mögliche Wiederherstellung zu ermöglichen. 
+	& - \\
+	\hline
+	FA-
+	& Das System \textbf{MUSS} sicherstellen, dass die Löschung von Veranstaltungen keine Auswirkungen auf die Gesamtstabilität des Systems hat. 
+	& - \\
+	\hline
+	FA-
+	& Das System \textbf{SOLL} eine Übersicht aller geplanten Veranstaltungen bieten, die jeder Akteur einsehen kann. 
+	& - \\
+	\hline
+	FA-
+	& Das System \textbf{MUSS} die Übersicht aller Veranstaltungen in Echtzeit darstellen, um aktuelle Informationen bereitzustellen. 
+	& - \\
+	\hline
+	FA-
+	& Das System \textbf{SOLL} anpassbare Filter für die Veranstaltungsansicht bereitstellen, um eine individuelle Ansicht zu ermöglichen. 
+	& - \\
+	\hline
+	FA-
+	& Das System \textbf{MUSS} die Übersichtsseite so gestalten, dass sie auch bei einer großen Anzahl von Einträgen performant bleibt. 
+	& - \\
+	\hline
+\end{tabular}
+
+\newpage
+
+\subsection{Module verwalten}
+\begin{tabular} {|p{1,1cm}|p{11cm}|p{2,7cm}|}
+	\hline
+	ID & Anforderung & Kriterien \\
+	\hline
+	FA-
+	& Das System \textbf{MUSS} dem Verwalter ermöglichen, neue Module mit relevanten Informationen wie Modulnamen, Beschreibungen und zugehörigen Veranstaltungen zu erstellen. 
+	& - \\
+	\hline
+	FA-
+	& Das System \textbf{MUSS} sicherstellen, dass bei der Erstellung von Modulen alle notwendigen Informationen validiert werden. 
+	& - \\
+	\hline
+	FA-
+	& Das System \textbf{MUSS} dem Verwalter ermöglichen, bestehende Modulinformationen zu aktualisieren. 
+	& - \\
+	\hline
+	FA-
+	& Das System \textbf{SOLL} eine Versionsgeschichte für jedes Modul führen, um Änderungen nachverfolgen und bei Bedarf frühere Versionen wiederherstellen zu können. 
+	& - \\
+	\hline
+	FA-
+	& Das System \textbf{SOLL} sicherstellen, dass Änderungen an Modulen keine negativen Auswirkungen auf die Kurszuordnung oder Stundenpläne haben. 
+	& - \\
+	\hline
+	FA-
+	& Das System \textbf{MUSS} das Entfernen von Modulen aus der Datenbank durch den Verwalter unterstützen. 
+	& - \\
+	\hline
+	FA-
+	& Das System \textbf{MUSS} eine Bestätigung vom Benutzer einholen, bevor ein Modul endgültig entfernt wird, um unbeabsichtigte Löschungen zu verhindern. 
+	& - \\
+	\hline
+	FA-
+	& Das System \textbf{SOLL} entfernte Module in einem Archiv speichern, um eine eventuelle Wiederherstellung zu ermöglichen. 
+	& - \\
+	\hline
+	FA-
+	& Das System \textbf{MUSS} sicherstellen, dass beim Entfernen von Modulen alle abhängigen Daten konsistent und fehlerfrei aktualisiert werden. 
+	& - \\
+	\hline
+\end{tabular}
+
+\newpage
+
+\begin{tabular} {|p{1,1cm}|p{11cm}|p{2,7cm}|}
+	\hline
+	ID & Anforderung & Kriterien \\
+	\hline
+	FA-
+	& Das System \textbf{MUSS} den Akteuren eine Übersicht aller Module zur Verfügung stellen, einschließlich der Informationen zu beteiligten Dozenten und Veranstaltungen. 
+	& - \\
+	\hline
+	FA-
+	& Das System \textbf{MUSS} die Modulübersicht in Echtzeit aktualisieren, um jederzeit den aktuellen Stand wiedergeben zu können. 
+	& - \\
+	\hline
+	FA-
+	& Das System \textbf{SOLL} für die Modulübersicht anpassbare Ansichten unterstützen, die es dem Benutzer ermöglichen, die Daten nach verschiedenen Kriterien zu sortieren und zu filtern. 
+	& - \\
+	\hline
+	FA-
+	& Das System \textbf{SOLL} auf die entsprechenden Stellen im Modulhandbuch verweisen. 
+	& - \\
+	\hline
+	FA-
+	& Das System \textbf{MUSS} die Integration der Module in die Stundenpläne der Studenten und Dozenten sicherstellen. 
+	& - \\
+	\hline
+	FA-
+	& Das System \textbf{MUSS} die nahtlose Integration neuer und aktualisierter Module in bestehende Stundenpläne ermöglichen, ohne dass es zu Konflikten oder Fehlern kommt. 
+	& - \\
+	\hline
+	FA-
+	& Das System \textbf{SOLL} eine Schnittstelle bieten, die es ermöglicht, Module direkt aus der Planungsansicht heraus zu verwalten. 
+	& - \\
+	\hline
+	FA-
+	& Das System \textbf{MUSS} dafür sorgen, dass die Verfügbarkeit der Stundenplan- und Moduldaten jederzeit gewährleistet ist, um kontinuierlichen Zugriff für die Benutzer zu bieten. 
+	& - \\
+	\hline
+\end{tabular}
+
