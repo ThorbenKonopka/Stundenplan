@@ -301,7 +301,55 @@ Um diesen Prozess für den Dozenten so angenehm wie möglich zu machen, soll es 
 \newpage
 
 \subsubsection{Angemeldeter Verwalter}
-Der Verwalter hat deutlich mehr recht was die Verwaltung von Terminen angeht. 
+Der Verwalter hat deutlich mehr recht was die Verwaltung von Terminen angeht, weil ein Verwalter dazu in der Lage sein muss den gesamten Stundenplan zu reparieren. 
+
+\vspace{12pt}
+
+\begin{tabular} {|p{1,1cm}|p{11cm}|p{2,7cm}|}
+	\hline
+	ID & Anforderung & Kriterien \\
+	\hline
+	FA-
+	& Wenn ein angemeldeter Dozent einen Vorschlag eingereicht hat, \textbf{MUSS} das System dem angemeldeten Verwalter den Vorschlag anzeigen und Ihm die Möglichkeit geben den Vorschlag anzuwenden. 
+	& - \\
+	\hline
+	FA-
+	& Wenn der angemeldeter Verwalter den Vorschlag anwendet, \textbf{MUSS} das System versuchen die enthaltenen Termine zu persistieren.
+	& - \\
+	\hline
+	FA-
+	& Wenn der angemeldeter Verwalter den Vorschlag anwendet, \textbf{MUSS} das System sicherstellen, dass es keine Überlappungen mit anderen Terminen gibt.
+	& - \\
+	\hline
+	FA-
+	& Wenn der angemeldeter Verwalter den Vorschlag ablehnt, \textbf{MUSS} das System den Verwalter dazu auffordern einen Grund anzugeben und den betroffenen Dozenten benachrichtigen.
+	& - \\
+	\hline
+	FA-
+	& Wenn der angemeldeter Verwalter einen neuen Termin anlegt, \textbf{MUSS} das System sicher stellen, dass es keine Überlappungen mit anderen Terminen bei beteiligten Studenten gibt.
+	& - \\
+	\hline
+	FA-
+	& Wenn es keine Überlappungen geben sollte, \textbf{MUSS} das System versuchen den Termin anzulegen.
+	& - \\
+	\hline
+	FA-
+	& Wenn es Überlappungen geben sollte, \textbf{MUSS} das System den Verwalter dazu auffordern einen anderen Zeitraum zu wählen.
+	& - \\
+	\hline
+	FA-
+	& Ein Verwalter \textbf{MUSS} ebenfalls die Möglichkeit haben Termine über einen Vorschlag mit dem Dozenten abzustimmen.
+	& - \\
+	\hline
+	FA-
+	& Wenn ein Verwalter versucht einen Termin zu verändern oder zu löschen \textbf{MUSS} das System versuchen den Termin zu verändern oder zu löschen.
+	& - \\
+	\hline
+	FA-
+	& Wenn ein Verwalter versucht einen Termin zu verändern \textbf{MUSS} das System sicher stellen, dass es keine Überlappungen mit anderen Terminen gibt.
+	& - \\
+	\hline
+\end{tabular}
 
 \newpage
 
