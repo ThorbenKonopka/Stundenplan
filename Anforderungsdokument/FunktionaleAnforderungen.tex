@@ -1,0 +1,775 @@
+% !TeX root = Anforderungsdokument.tex
+
+\clearpage
+
+\section{Funktionale Anforderungen}
+Wir haben uns zusammengesetzt und uns Anforderungen überlegt. Die Anforderungen sollen in Form von Texten zuerst erklärt und dann mit Satzschablonen spezifiziert werden. 
+
+\vspace{6pt}
+
+Die spezifizierten Anforderungen sollen die folgenden Bedingungen erfüllen.
+\begin{itemize}
+	\item Eine Anforderung muss überprüfbar sein. Wenn eine Anforderung nicht selbst vollständig überprüfbar ist, müssen weitere Anforderungen als Kriterien definiert werden.
+	\item Jede Anforderung muss eine eindeutige ID haben. 
+	\begin{itemize}
+		\item Die ID von Funktionalen Anforderungen fängt mit \textbf{FA-} an.
+		\item Die ID von Nicht Funktionalen Anforderungen fängt mit \textbf{NFA-} an.
+	\end{itemize}
+	\item Jede Anforderung muss sich aus dem über der Tabelle stehenden Text ergeben.
+\end{itemize}
+
+Die Anforderungen wurden Schrittweise ermittelt und spezifiziert. Zuerst wurde ein Text geschrieben, dem Anforderungen entnommen werden können. Unter dem Text wurde eine Tabelle erstellt, die die aus dem Text ausgearbeiteten Anforderungen enthält.
+
+\newpage
+
+\subsection{Einloggen}
+Wir finden, dass eine einfache Anmeldung mit Benutzername und Passwort völlig ausreicht. Es macht zudem keinen Sinn verschiedene Anmeldefenster für die Verschiedenen Benutzerarten zu erstellen. Es ist vorgesehen, dass anhand des Benutzernamens herausgefunden werden kann, was für ein Benutzer sich gerade angemeldet hat.
+
+\vspace{12pt}
+
+\begin{tabular} {|p{1,1cm}|p{11cm}|p{2,7cm}|}
+	\hline
+	ID & Anforderung & Kriterien \\
+	\hline
+	FA-
+	& Wenn ein unangemeldeter Benutzer das System aufruft \textbf{MUSS} Das System den Benutzer dazu auffordern sich mit seinem Benutzernamen und seinem Password anzumelden.
+	& - \\
+	\hline
+	FA- 
+	& Wenn ein unangemeldeter Benutzer einen richtigen Benutzernamen und das richtige Passwort eingegeben hat \textbf{MUSS} das System den Benutzer anmelden und weiterleiten.
+	& -  \\
+	\hline
+	FA- 
+	& Wenn ein unangemeldeter Benutzer einen falschen Benutzernamen oder ein falsches Passwort eingegeben hat, \textbf{MUSS} das System den Benutzer darauf hinweisen, dass die Anmeldung nicht erfolgreich war.
+	& - \\
+	\hline
+	FA-
+	& Wenn eine Anmeldung nicht erfolgreich war, \textbf{DARF} das System \textbf{NICHT} anzeigen, welche Eingabe nicht korrekt war.
+	& - \\
+	\hline
+\end{tabular}
+
+\newpage
+
+\subsection{Termine einsehen}
+Dieses System ist in erster Linie dazu da um Termine zu verwalten. Bei der Betrachtung dieser Funktionalität spielen die verschiedenen Benutzergruppen bzw. die verschiedenen Sichten auf diese Funktionalitäten eine große Rolle. 
+
+\vspace{12pt}
+
+\subsubsection{Unangemeldeter Benutzer}
+Es macht Sinn, das alle Termine von allen Personen eingesehen werden können, weil nicht davon auszugehen ist, dass jeder Student immer seine Anmeldedaten kennt. Zudem sind alle Termine zum jetzigen Zeitpunkt auch für alle zugänglich. So kann sicher gestellt werden, dass jeder Student, der eine Internetverbindung und ein Internet fähiges Gerät besitzt, heraus finden kann, ob er gleich einen Termin hat oder nicht. \\
+Beim ITC werden für diese Kategorisierung die Jahrgänge und die Gruppen benutzt. Das nehmen wir als gegeben hin und haben vor es sehr ähnlich umzusetzen.
+
+\vspace{12pt}
+
+\begin{tabular} {|p{1,1cm}|p{11cm}|p{2,7cm}|}
+	\hline
+	ID & Anforderung & Kriterien \\
+	\hline
+	FA-
+	& Wenn ein unangemeldeter Benutzer das System aufruft \textbf{SOLL} das System dem Benutzer die Möglichkeit geben alle Termine einzusehen. 
+	& NFA-2, NFA-3 \\
+	\hline
+	FA- 
+	& Wenn ein unangemeldeter Benutzer alle Termine einsieht \textbf{SOLL} das System dem Benutzer die Möglichkeit geben Jahrgänge auszuwählen.
+	& -  \\
+	\hline
+	FA- 
+	& Wenn ein unangemeldeter Benutzer alle Termine einsieht \textbf{SOLL} das System dem Benutzer die Möglichkeit geben die Gruppen \texttt{A-F} und \texttt{G-L} auszuwählen.
+	& - \\
+	\hline
+	FA-
+	& Wenn ein unangemeldeter Benutzer einen oder mehrere Jahrgänge ausgewählt hat, \textbf{MUSS} das System alle Termine anzeigen, die sich den ausgewählten Jahrgängen zuordnen lassen.
+	& - \\
+	\hline
+	FA-
+	& Wenn ein unangemeldeter Benutzer eine oder alle Gruppen ausgewählt hat \textbf{MUSS} das System alle Termine anzeigen, die sich den ausgewählten Gruppen zuordnen lassen.
+	& - \\
+	\hline
+	FA-
+	& Wenn ein unangemeldeter Benutzer sowohl Jahrgänge als auch Gruppen ausgewählt hat \textbf{MUSS} das System die Schnittmenge der beiden Termin-Menge anzeigen.
+	& - \\
+	\hline
+	FA-
+	& Wenn ein unangemeldeter Benutzer keine Gruppe ausgewählt hat \textbf{MUSS} das System diesen Filter ignorieren.
+	& - \\
+	\hline
+	FA-
+	& Wenn ein unangemeldeter Benutzer keine Jahrgänge ausgewählt hat \textbf{MUSS} das System diesen Filter ignorieren.
+	& - \\
+	\hline
+\end{tabular}
+
+\newpage
+
+\subsubsection{Angemeldeter Student und Dozent}
+Bei dem Einsehen von Terminen haben Studenten und Dozenten fast identische Anwendungsfälle und Anforderungen. Studenten und Dozenten rufen ihren Stundenplan auf um herauszufinden wann sie einen Termin haben. Es macht Sinn nur die Termine anzuzeigen, die für den angemeldeten Benutzer bestimmt sind. Dadurch muss der Benutzer weniger über seinen Stundenplan nachdenken, weniger filtern und kann wichtige Informationen direkt mit wenigen Blicken in Erfahrung bringen. 
+
+\vspace{12pt}
+
+\begin{tabular} {|p{1,1cm}|p{11cm}|p{2,7cm}|}
+	\hline
+	ID & Anforderung & Kriterien \\
+	\hline
+	FA-
+	& Wenn ein Angemeldeter Student oder Dozent seine Termine einsehen möchte \textbf{MUSS} das System die Termine anzeigen, die sich dem Studenten oder Dozenten zuordnen lassen. 
+	& - \\
+	\hline
+\end{tabular}
+
+\newpage
+
+\subsubsection{Angemeldeter Verwalter}
+Aus unserer Sicht macht es Sinn, dass ein Verwalter alle Termine einsehen kann. Die Ansicht der Termine soll weitestgehend identisch mit der eines unangemeldeten Benutzers sein. Zusätzlich halten wir es für realistisch, dass ein Verwalter nach einem Studenten suchen muss. Dabei soll der Verwalter, eine Matrikelnummer oder einen Namen in ein Feld eingeben, dann einen konkreten Studenten aussuchen können. Danach sollen nur noch alle Termine des Ausgewählten Studenten angezeigt werden.
+
+\vspace{12pt}
+
+\begin{tabular} {|p{1,1cm}|p{11cm}|p{2,7cm}|}
+	\hline
+	ID & Anforderung & Kriterien \\
+	\hline
+	FA-
+	& Wenn ein angemeldeter Verwalter alle Termine einsehen möchte \textbf{MUSS} das System alle Termine anzeigen. 
+	& - \\
+	\hline
+	FA-
+	& Wenn ein angemeldeter Verwalter alle Termine angezeigt bekommt \textbf{MUSS} dem Benutzer die Möglichkeit in einem Suchfeld eine Matrikelnummer oder einen Namen einzugeben. 
+	& - \\
+	\hline
+	FA-
+	& Wenn ein angemeldeter Verwalter in dem Suchfeld mindestens einen Buchstaben eingegeben hat, \textbf{MUSS} das System mögliche Studenten, bei denen die eingegebenen Zeichen entweder bei der Matrikelnummer oder bei dem Namen übereinstimmen, auflisten und zur Auswahl bereitstellen. 
+	& - \\
+	\hline
+	FA-
+	& Wenn ein angemeldeter Verwalter einen Studenten ausgewählt hat \textbf{MUSS} das System alle Termine des ausgewählten Studenten anzeigen. 
+	& - \\
+	\hline
+	FA-
+	& Wenn ein angemeldeter Verwalter einen Studenten ausgewählt hat \textbf{MUSS} das System dem Verwalter die Möglichkeit geben, den Studenten als Filter zu entfernen. 
+	& - \\
+	\hline
+	FA-
+	& Wenn ein angemeldeter Verwalter einen Studenten ausgewählt hat \textbf{DARF} das System \textbf{NICHT} dem Verwalter die Möglichkeit geben, einen weiteren Studenten auszuwählen. 
+	& - \\
+	\hline
+\end{tabular}
+
+\newpage
+
+\subsubsection{Anzuzeigende Daten}
+Für einen unangemeldeten Benutzer darf bei jedem Termin, das Datum, die Start- und Endzeit, der Dozent, die Bezeichnung des Moduls und falls vorhanden die Raumnummer angezeigt werden. 
+
+\vspace{6pt}
+
+Für einen angemeldeten Dozenten werden mit einer Ausnahme und einer Erweiterung die gleichen Daten für jeden Termin angezeigt. Das wären, das Datum, die Start- und Endzeit, die Bezeichnung des Moduls, falls vorhanden die Raumnummer und falls vorhanden der Link zu einer Onlineplattform. 
+
+\vspace{6pt}
+
+Für einen angemeldeten Studenten werden mit einer Erweiterung die gleichen Daten für jeden Termin angezeigt, wie für einen unangemeldeten Benutzer. Das wären, das Datum, die Start- und Endzeit, der Dozent, die Bezeichnung des Moduls, falls vorhanden die Raumnummer und falls vorhanden der Link zu einer Onlineplattform. 
+
+\vspace{6pt}
+
+Für einen angemeldeten Verwalter werden die gleichen Daten für jeden Termin angezeigt, wie bei einem angemeldeten Studenten. Das wären, das Datum, die Start- und Endzeit, der Dozent, die Bezeichnung des Moduls, falls vorhanden die Raumnummer und falls vorhanden der Link zu einer Onlineplattform. 
+
+\vspace{12pt}
+
+\begin{tabular} {|p{1,1cm}|p{11cm}|p{2,7cm}|}
+	\hline
+	ID & Anforderung & Kriterien \\
+	\hline
+	FA-
+	& Wenn ein unangemeldeter Benutzer alle Termine angezeigt bekommt \textbf{MUSS} das System, das Datum, die Start- und Endzeit, der Dozent, die Bezeichnung des Moduls und falls vorhanden die Raumnummer anzeigen. 
+	& - \\
+	\hline
+	FA-
+	& Wenn ein angemeldeter Dozent alle Termine angezeigt bekommt \textbf{MUSS} das System, das Datum, die Start- und Endzeit, die Bezeichnung des Moduls, falls vorhanden die Raumnummer und falls vorhanden der Link zu einer Onlineplattform anzeigen. 
+	& - \\
+	\hline
+	FA-
+	& Wenn ein angemeldeter Student alle Termine angezeigt bekommt \textbf{MUSS} das System, das Datum, die Start- und Endzeit, der Dozent, die Bezeichnung des Moduls, falls vorhanden die Raumnummer und falls vorhanden der Link zu einer Onlineplattform anzeigen. 
+	& - \\
+	\hline
+	FA-
+	& Wenn ein angemeldeter Student alle Termine angezeigt bekommt \textbf{MUSS} das System , das Datum, die Start- und Endzeit, der Dozent, die Bezeichnung des Moduls, falls vorhanden die Raumnummer und falls vorhanden der Link zu einer Onlineplattform anzeigen.
+	& - \\
+	\hline
+	FA-
+	& Das System \textbf{DARF NICHT} den Link für Onlinevorlesungen für unangemeldete Benutzer anzeigen. 
+	& - \\
+	\hline
+\end{tabular}
+
+\newpage
+
+\subsection{Termine verwalten}
+Unter Termine verwalten versteht man, die Bearbeitung, die Erstellung und das Löschen von Terminen. Dabei haben verschiedene Benutzergruppen verschiedene Anforderungen an die Verwaltung von Terminen.
+
+\vspace{12pt}
+
+\subsubsection{Unangemeldeter Benutzer und Studenten}
+Es macht keinen Sinn, dass ein Student oder unangemeldeter Benutzer, Termine verwalten kann.
+
+\vspace{12pt}
+
+\begin{tabular} {|p{1,1cm}|p{11cm}|p{2,7cm}|}
+	\hline
+	ID & Anforderung & Kriterien \\
+	\hline
+	FA-
+	& Das System \textbf{DARF NICHT} erlauben, dass Studenten oder unangemeldete Benutzer, Termine in irgendeiner Form verwalten. 
+	& - \\
+	\hline
+	FA-
+	& Wenn ein angemeldeter Student oder ein unangemeldeter Benutzer versucht einen Termine zu verwalten (bearbeiten, erstellen oder löschen), dann \textbf{MUSS} das System weiteres Vorgehen unterbinden und dem Benutzer mitteilen, dass er nicht autorisiert ist.
+	& - \\ 
+	\hline
+\end{tabular}
+
+%\vspace{12pt}
+\newpage
+
+\subsubsection{Angemeldeter Dozent}
+Ein Dozent ist maßgeblich an der Terminfindung beteiligt. Bestimmte Richtlinien am ITC machen es jedoch etwas schwieriger passende Termine zu finden. Es ist z.B.: angedacht, dass ein Student mindestens zwei Tage pro Woche im Unternehmen arbeitet. Deshalb muss ein Verwalter, der solches Wissen besitzt auch an der Terminfindung beteiligt sein. Wir haben uns überlegt, dass es Sinn machen würde, wenn ein Dozent, Toolgestützt Termine als eine Art Vorschlag einreichen kann. Ein Vorschlag wäre dann eine Summe von Terminen. Dieser Vorschlag muss dann von einem Verwalter untersucht werden. In der Ansicht um Termine anzulegen müssen die bereits belegten Zeiträume eindeutig identifizierbar sein, damit es keine Überlappungen gibt und der Dozent Termine in noch freien Zeiträumen wählen kann. Unterschieden wird zwischen der Änderung der Daten (Start- und Endzeit, Modul Bezeichnung, Raumnummer etc.) und dem Erzeugen, Löschen und Änderungen an dem Datum. Um Termine zu erzeugen, löschen oder um das Datum zu ändern wird ein beschriebener Vorschlag benutzt. Um kleinere Daten, wie die Zeiten etc. zu Ändern wird so ein Vorschlag nicht benötigt. Dadurch soll es dem Dozenten möglich sein, schnell und mobil Termindaten zu ändern, ohne dabei ihm unbekannte Richtlinien zu verletzen.
+
+\vspace{12pt}
+
+\begin{tabular} {|p{1,1cm}|p{11cm}|p{2,7cm}|}
+	\hline
+	ID & Anforderung & Kriterien \\
+	\hline
+	FA-
+	& Wenn ein angemeldeter Dozent Termine anlegen möchte \textbf{MUSS} das System einen neuen Vorschlag erstellen und diesen von dem Dozenten bearbeiten lassen.
+	& - \\
+	\hline
+	FA-
+	& Wenn ein angemeldeter Dozent einen Vorschlag bearbeitet, \textbf{MUSS} das System den Benutzer dazu auffordern \textbf{einen} Jahrgang auszuwählen. 
+	& - \\
+	\hline
+	FA-
+	& Wenn ein angemeldeter Dozent einen Vorschlag bearbeitet und ein Jahrgang ausgewählt wurde, \textbf{MUSS} das System dem Benutzer die Möglichkeit geben einen neuen Termin anzulegen.  
+	& - \\
+	\hline
+	FA-
+	& Wenn ein angemeldeter Dozent einen neuen Termin anlegt, \textbf{MUSS} das System den Benutzer fragen, für welche Veranstaltung der Termin gedacht ist.
+	& - \\
+	\hline
+	FA-
+	& Wenn ein angemeldeter Dozent einen neuen Termin anlegt und die Veranstaltung ausgewählt hat, \textbf{MUSS} das System den Benutzer die Möglichkeit geben, die restlichen Daten (Start- und Endzeit, Raumnummer, Link für die Vorlesung) einzutragen. 
+	& - \\
+	\hline
+\end{tabular}
+	
+\begin{tabular} {|p{1,1cm}|p{11cm}|p{2,7cm}|}
+	\hline
+	ID & Anforderung & Kriterien \\
+	\hline
+	FA-
+	& Wenn ein angemeldeter Dozent alle benötigten Daten eingegeben hat, \textbf{MUSS} das System verifizieren, dass der neue Termin in einem freien Zeitraum liegt.
+	& - \\
+	\hline
+	FA-
+	& Wenn das System verifiziert hat, dass der Termin in einem freien Zeitraum liegt, \textbf{MUSS} das System versuchen den Termin in dem Vorschlag zu speichern.
+	& - \\
+	\hline
+	FA-
+	& Das System feststellt, dass der Termin in einem belegten Zeitraum liegt, \textbf{MUSS} das System weiteres Vorgehen unterbinden und den Dozenten darauf hinweisen, dass der Termin in diesem Zeitraum nicht angelegt werden kann.
+	& - \\
+	\hline
+	FA-
+	& Wenn ein angemeldeter Dozent mindestens einen Termin angelegt hat, \textbf{MUSS} das System dem Dozenten die Möglichkeit geben den Vorschlag freizugeben, damit ein Verwalter diesen einsehen kann.
+	& - \\
+	\hline
+	FA-
+	& Ein Dozent \textbf{MUSS} einen seiner angelegten Termine im Nachhinein bezüglich der Raumnummer oder des Links zur Online-Veranstaltung selbst ändern können.
+	& - \\
+	\hline
+\end{tabular}
+
+
+\newpage
+
+Um diesen Prozess für den Dozenten so angenehm wie möglich zu machen, soll es Tools geben, die Ihm das Leben einfacher machen sollen. Zuerst soll es eine KI geben, die Zeiträume für Termine vorschlägt. Dabei ist das Ziel, dass der Dozent Termine auswählen kann, zu denen die Studenten z.B.: am aktivsten sind. 
+%Das zweite Tool ist eine Art Wochenplaner, bei dem der Dozent eine für das Semester repräsentative Woche mit Terminen einträgt und das Tool generiert dann einen einreichbaren Vorschlag. Dadurch soll dem Dozenten Arbeit abgenommen werden.
+
+\vspace{12pt}
+
+\begin{tabular} {|p{1,1cm}|p{11cm}|p{2,7cm}|}
+	\hline
+	ID & Anforderung & Kriterien \\
+	\hline
+	FA-
+	& Wenn ein angemeldeter Dozent einen Vorschlag bearbeitet, \textbf{MUSS} das System dem Benutzer auf KI-basierende Termine Vorschlagen. 
+	& - \\
+	\hline
+	FA-
+	& Wenn ein angemeldeter Dozent einen auf KI-basierenden Termin auswählt \textbf{MUSS} das System die gleichen Daten, wie bei dem Normalen anlegen fragen. Die einzige Ausnahme ist der Zeitraum. Dieser soll vor befüllt aber bearbeitbar sein. 
+	& - \\
+	\hline
+\end{tabular}
+
+
+\newpage
+
+\subsubsection{Angemeldeter Verwalter}
+Der Verwalter hat deutlich mehr recht was die Verwaltung von Terminen angeht, weil ein Verwalter dazu in der Lage sein muss den gesamten Stundenplan zu reparieren. 
+
+\vspace{12pt}
+
+\begin{tabular} {|p{1,1cm}|p{11cm}|p{2,7cm}|}
+	\hline
+	ID & Anforderung & Kriterien \\
+	\hline
+	FA-
+	& Wenn ein angemeldeter Dozent einen Vorschlag eingereicht hat, \textbf{MUSS} das System dem angemeldeten Verwalter den Vorschlag anzeigen und Ihm die Möglichkeit geben den Vorschlag anzuwenden. 
+	& - \\
+	\hline
+	FA-
+	& Wenn der angemeldeter Verwalter den Vorschlag anwendet, \textbf{MUSS} das System versuchen die enthaltenen Termine zu persistieren.
+	& - \\
+	\hline
+	FA-
+	& Wenn der angemeldeter Verwalter den Vorschlag anwendet, \textbf{MUSS} das System sicherstellen, dass es keine Überlappungen mit anderen Terminen gibt.
+	& - \\
+	\hline
+	FA-
+	& Wenn der angemeldeter Verwalter den Vorschlag ablehnt, \textbf{MUSS} das System den Verwalter dazu auffordern einen Grund anzugeben und den betroffenen Dozenten benachrichtigen.
+	& - \\
+	\hline
+	FA-
+	& Wenn der angemeldeter Verwalter einen neuen Termin anlegt, \textbf{MUSS} das System sicher stellen, dass es keine Überlappungen mit anderen Terminen bei beteiligten Studenten gibt.
+	& - \\
+	\hline
+	FA-
+	& Wenn es keine Überlappungen geben sollte, \textbf{MUSS} das System versuchen den Termin anzulegen.
+	& - \\
+	\hline
+	FA-
+	& Wenn es Überlappungen geben sollte, \textbf{MUSS} das System den Verwalter dazu auffordern einen anderen Zeitraum zu wählen.
+	& - \\
+	\hline
+	FA-
+	& Ein Verwalter \textbf{MUSS} ebenfalls die Möglichkeit haben Termine über einen Vorschlag mit dem Dozenten abzustimmen.
+	& - \\
+	\hline
+	FA-
+	& Wenn ein Verwalter versucht einen Termin zu verändern oder zu löschen \textbf{MUSS} das System versuchen den Termin zu verändern oder zu löschen.
+	& - \\
+	\hline
+	FA-
+	& Wenn ein Verwalter versucht einen Termin zu verändern \textbf{MUSS} das System sicher stellen, dass es keine Überlappungen mit anderen Terminen gibt.
+	& - \\
+	\hline
+\end{tabular}
+
+\newpage
+
+\subsection{Termine verschieben}
+
+\subsubsection{Unangemeldeter Benutzer und Student}
+Ein angemeldeter Student oder ein unangemeldeter Benutzer darf unter keinen Umständen Termine verschieben.
+
+\vspace{12pt}
+
+\begin{tabular} {|p{1,1cm}|p{11cm}|p{2,7cm}|}
+	\hline
+	ID & Anforderung & Kriterien \\
+	\hline
+	FA-
+	& Das System \textbf{DARF NICHT} erlauben, dass Studenten oder unangemeldete Benutzer, Termine in irgendeiner Form verschieben. 
+	& - \\
+	\hline
+	FA-
+	& Wenn ein angemeldeter Student oder ein unangemeldeter Benutzer versucht einen Termine zu verschieben, dann \textbf{MUSS} das System weiteres Vorgehen unterbinden und dem Benutzer mitteilen, dass er nicht autorisiert ist.
+	& - \\ 
+	\hline
+\end{tabular}
+
+\vspace{12pt}
+
+\subsubsection{Angemeldeter Dozent}
+
+Ein Dozent darf Termine in ihrer Uhrzeit selbst verschieben, soll aber für Änderungen am Datum eines Termins immer die Verwaltung anfragen müssen.
+
+\vspace{12pt}
+
+\begin{tabular} {|p{1,1cm}|p{11cm}|p{2,7cm}|}
+	\hline
+	ID & Anforderung & Kriterien \\
+	\hline
+	FA-
+	& Ein Dozent \textbf{MUSS} die Uhrzeit eines Termins ändern können.
+	& - \\
+	\hline
+	FA-
+	& Ein Dozent \textbf{DARF NICHT} selbst das Datum eines Termins ändern.
+	& - \\
+	\hline
+	FA-
+	& Ein Dozent \textbf{MUSS} eine Anfrage zum Ändern des Datums eines Termins an die Verwaltung stellen können.
+	& - \\
+	\hline
+\end{tabular}
+
+\vspace{12pt}
+
+\subsubsection{Angemeldeter Verwalter}
+
+Ein Verwalter darf Termine selbst beliebig verschieben und muss die von Dozenten gestellten Anfragen bearbeiten können. Ebenfalls muss der Verwalter die von Dozenten selbst durchgeführten Verschiebungen kontrollieren können.
+
+\vspace{12pt}
+
+\begin{tabular} {|p{1,1cm}|p{11cm}|p{2,7cm}|}
+	\hline
+	ID & Anforderung & Kriterien \\
+	\hline
+	FA-
+	& Ein Verwalter \textbf{MUSS} einen Termin in seiner Uhrzeit und seinem Datum verschieben können.
+	& - \\
+	\hline
+	FA-
+	& Ein Verwalter \textbf{MUSS} die gestellten Datumsänderungsanfragen von Dozenten einsehen können.
+	& - \\
+	\hline
+	FA-
+	& Ein Verwalter \textbf{MUSS} die Verschiebe-Anfragen von Dozenten annehmen oder ablehnen können, je nachdem, ob sich diese mit anderen Terminen überschneiden oder durch den neuen Termin Richtlinien verletzt werden würden.
+	& - \\
+	\hline
+	FA-
+	& Ein Verwalter \textbf{MUSS} die durchgeführten Uhrzeitänderungen von Dozenten einsehen können und diese rückgängig machen, falls diese zu Konflikten führen.
+	& - \\
+	\hline
+\end{tabular}
+
+\newpage
+
+\subsection{Anwesenheitsliste verwalten}
+
+\subsubsection{Studenten und unangemeldete Benutzer}
+Angemeldete Studenten und unangemeldete Benutzer dürfen unter keinen Umständen die Anwesenheitsliste in irgendeiner Form verwalten. Es darf nicht möglich sein, dass ein Student seine eigenen Fehlzeiten bearbeiten kann.
+
+\vspace{12pt}
+
+\begin{tabular} {|p{1,1cm}|p{11cm}|p{2,7cm}|}
+	\hline
+	ID & Anforderung & Kriterien \\
+	\hline
+	FA-
+	& Das System \textbf{DARF NICHT} erlauben, dass Studenten oder unangemeldete Benutzer, Anwesenheitslisten in irgendeiner Form verwalten oder einsehen. 
+	& - \\
+	\hline
+	FA-
+	& Wenn ein angemeldeter Student oder ein unangemeldeter Benutzer versucht eine Anwesenheitsliste zu verwalten oder einzusehen, dann \textbf{MUSS} das System weiteres Vorgehen unterbinden und dem Benutzer mitteilen, dass er nicht autorisiert ist.
+	& - \\ 
+	\hline
+\end{tabular}
+
+\newpage
+
+\subsection{Fehlzeiten einsehen}
+
+\subsubsection{Unangemeldete Benutzer}
+Ein unangemeldeter Benutzer darf unter keinen Umständen die Fehlzeiten von anderen Benutzern einsehen.
+
+\vspace{12pt}
+
+\begin{tabular} {|p{1,1cm}|p{11cm}|p{2,7cm}|}
+	\hline
+	ID & Anforderung & Kriterien \\
+	\hline
+	FA-
+	& Das System \textbf{DARF NICHT} erlauben, dass unangemeldete Benutzer, Fehlzeiten in irgendeiner Form einsehen. 
+	& - \\
+	\hline
+	FA-
+	& Wenn ein unangemeldeter Benutzer versucht einen Fehlzeiten einzusehen, \textbf{MUSS} das System weiteres Vorgehen unterbinden und dem Benutzer mitteilen, dass er nicht autorisiert ist.
+	& - \\ 
+	\hline
+\end{tabular}
+
+\vspace{12pt}
+
+\subsubsection{Angemeldeter Student}
+\begin{tabular} {|p{1,1cm}|p{11cm}|p{2,7cm}|}
+	\hline
+	ID & Anforderung & Kriterien \\
+	\hline
+	FA-
+	& Ein Student \textbf{MUSS} seine Fehlzeiten einsehen können. 
+	& - \\
+	\hline
+	FA-
+	& Die angezeigten Fehlzeiten \textbf{MÜSSEN} notwendige Informationen über den Termin enthalten.
+	& - \\ 
+	\hline
+\end{tabular}
+
+\vspace{12pt}
+
+\subsubsection{Angemeldeter Dozent}
+\begin{tabular} {|p{1,1cm}|p{11cm}|p{2,7cm}|}
+	\hline
+	ID & Anforderung & Kriterien \\
+	\hline
+	FA-
+	& Ein Dozent \textbf{DARF NICHT} Fehlzeiten einsehen. Hier ist die Anwesenheitsliste eine Ausnahme. 
+	& - \\
+	\hline
+\end{tabular}
+
+\vspace{12pt}
+
+\subsubsection{Angemeldeter Verwalter}
+\begin{tabular} {|p{1,1cm}|p{11cm}|p{2,7cm}|}
+	\hline
+	ID & Anforderung & Kriterien \\
+	\hline
+	FA-
+	& Ein Verwalter \textbf{MUSS} alle Fehlzeiten einsehen können. 
+	& - \\
+	\hline
+	FA-
+	& Ein Verwalter \textbf{MUSS} alle Fehlzeiten zu einem spezifizierten Studenten in Erfahrung bringen können.
+	& - \\ 
+	\hline
+	FA-
+	& Wenn ein Verwalter anfängt die Matrikelnummer oder den Namen des Studenten einzugeben, \textbf{MUSS} das System passende Studenten vorschlagen.
+	& - \\ 
+	\hline
+\end{tabular}
+
+\newpage
+
+\subsection{Benutzer verwalten}
+\begin{tabular} {|p{1,1cm}|p{11cm}|p{2,7cm}|}
+	\hline
+	ID & Anforderung & Kriterien \\
+	\hline
+	FA-
+	& Ein Verwalter \textbf{MUSS} neue Benutzerkonten anlegen können. 
+	& - \\
+	\hline
+	FA-
+	& Das System \textbf{MUSS} die Erstellung von Benutzerkonten innerhalb von 5 Sekunden nach Eingabe der erforderlichen Daten ermöglichen, um eine schnelle Einrichtung zu gewährleisten. 
+	& - \\ 
+	\hline
+	FA-
+	& Das System \textbf{SOLL} bei der Erstellung von Benutzerkonten eine SSL-verschlüsselte Verbindung verwenden, um die Sicherheit der Daten zu gewährleisten.
+	& - \\ 
+	\hline
+	FA-
+	& Das System \textbf{MUSS} Verwaltern die Aktualisierung von Benutzerinformationen wie Name, E-Mail-Adresse und Rolle ermöglichen.
+	& - \\ 
+	\hline
+	FA-
+	& Das System \textbf{MUSS} sicherstellen, dass Änderungen an Benutzerkonten entsprechend den Datenschutzrichtlinien protokolliert werden.
+	& - \\ 
+	\hline
+	FA-
+	& Das System \textbf{SOLL} eine benutzerfreundliche Schnittstelle zur Aktualisierung von Benutzerinformationen bieten, die ohne spezielle Schulung bedienbar ist.
+	& - \\ 
+	\hline
+	FA-
+	& Wenn ein Verwalter ein Benutzerkonto löschen möchte, \textbf{SOLL} das System eine Bestätigung einholen, um unbeabsichtigte Löschungen zu vermeiden.
+	& - \\ 
+	\hline
+	FA-
+	& Das System \textbf{MUSS} gelöschte Benutzerdaten gemäß den gesetzlichen Aufbewahrungsfristen speichern, bevor sie endgültig entfernt werden.
+	& - \\ 
+	\hline
+	FA-
+	& Das System \textbf{SOLL} regelmäßig Backups der Benutzerdaten erstellen, um Datenverlust bei einem Fehler zu verhindern.
+	& - \\ 
+	\hline
+	FA-
+	& Das System \textbf{MUSS} die Bestätigungsanforderung klar und verständlich darstellen, um Fehlbedienungen zu minimieren.
+	& - \\ 
+	\hline
+\end{tabular}
+
+\newpage
+
+\begin{tabular} {|p{1,1cm}|p{11cm}|p{2,7cm}|}
+	\hline
+	ID & Anforderung & Kriterien \\
+	\hline
+	FA-
+	& Das System \textbf{MUSS} allen Akteuren außer dem Gast  ermöglichen, Passwörter für Benutzerkonten zurückzusetzen. 
+	& - \\
+	\hline
+	FA-
+	& Das System \textbf{MUSS} einen sicheren Prozess für das Zurücksetzen von Passwörtern bieten, einschließlich der Bestätigung durch eine Zwei-Faktor-Authentifizierung. 
+	& - \\
+	\hline
+	FA-
+	& Das System \textbf{SOLL} in der Lage sein, das Zurücksetzen von Passwörtern innerhalb von 60 Sekunden durchzuführen. 
+	& - \\
+	\hline
+	FA-
+	& Das System \textbf{SOLL} bei der Passwortrücksetzung starke Passwörter gemäß den aktuellen Sicherheitsstandards erzwingen. 
+	& - \\
+	\hline
+\end{tabular}
+
+%\newpage
+\vspace{18pt}
+
+\subsection{Veranstaltungen verwalten}
+\begin{tabular} {|p{1,1cm}|p{11cm}|p{2,7cm}|}
+	\hline
+	ID & Anforderung & Kriterien \\
+	\hline
+	FA-
+	& Das System \textbf{SOLL} dem Verwalter ermöglichen, neue Veranstaltungen mit Details hinzuzufügen. 
+	& - \\
+	\hline
+	FA-
+	& Das System \textbf{MUSS} die Erstellung neuer Veranstaltungen innerhalb von maximal 10 Sekunden ermöglichen, um eine effiziente Verwaltung zu gewährleisten. 
+	& - \\
+	\hline
+	FA-
+	& Das System \textbf{MUSS} sicherstellen, dass Veranstaltungsdaten über sichere Protokolle (wie HTTPS) übertragen werden, um die Integrität und Vertraulichkeit der Informationen zu schützen. 
+	& - \\
+	\hline
+	FA-
+	& Das System \textbf{SOLL} in der Lage sein, eine unbegrenzte Anzahl von Veranstaltungen zu unterstützen, ohne an Leistung zu verlieren. 
+	& - \\
+	\hline
+	FA-
+	& Das System \textbf{MUSS} das Bearbeiten von Veranstaltungsdetails durch den Verwalter ermöglichen. 
+	& - \\
+	\hline
+	FA-
+	& Das System \textbf{MUSS} Änderungen an Veranstaltungsdetails sofort in allen abhängigen Systemen und Ansichten aktualisieren, um Konsistenz zu gewährleisten. 
+	& - \\
+	\hline
+	FA-
+	& Das System \textbf{MUSS} Benutzerschnittstellen bereitstellen, die intuitiv und ohne zusätzliche Schulung zu bedienen sind. 
+	& - \\
+	\hline
+\end{tabular}
+
+\newpage
+
+\begin{tabular} {|p{1,1cm}|p{11cm}|p{2,7cm}|}
+	\hline
+	ID & Anforderung & Kriterien \\
+	\hline
+	FA-
+	& Das System \textbf{SOLL} dem Verwalter ermöglichen, Veranstaltungen aus dem System zu entfernen. 
+	& - \\
+	\hline
+	FA-
+	& Das System \textbf{MUSS} eine Warnmeldung anzeigen und eine Bestätigung verlangen, bevor eine Veranstaltung endgültig gelöscht wird, um unbeabsichtigte Löschungen zu verhindern. 
+	& - \\
+	\hline
+	FA-
+	& Das System \textbf{SOLL} gelöschte Veranstaltungen in einem Archiv für einen definierten Zeitraum speichern, um eine mögliche Wiederherstellung zu ermöglichen. 
+	& - \\
+	\hline
+	FA-
+	& Das System \textbf{MUSS} sicherstellen, dass die Löschung von Veranstaltungen keine Auswirkungen auf die Gesamtstabilität des Systems hat. 
+	& - \\
+	\hline
+	FA-
+	& Das System \textbf{SOLL} eine Übersicht aller geplanten Veranstaltungen bieten, die jeder Akteur einsehen kann. 
+	& - \\
+	\hline
+	FA-
+	& Das System \textbf{MUSS} die Übersicht aller Veranstaltungen in Echtzeit darstellen, um aktuelle Informationen bereitzustellen. 
+	& - \\
+	\hline
+	FA-
+	& Das System \textbf{SOLL} anpassbare Filter für die Veranstaltungsansicht bereitstellen, um eine individuelle Ansicht zu ermöglichen. 
+	& - \\
+	\hline
+	FA-
+	& Das System \textbf{MUSS} die Übersichtsseite so gestalten, dass sie auch bei einer großen Anzahl von Einträgen performant bleibt. 
+	& - \\
+	\hline
+\end{tabular}
+
+\newpage
+
+\subsection{Module verwalten}
+\begin{tabular} {|p{1,1cm}|p{11cm}|p{2,7cm}|}
+	\hline
+	ID & Anforderung & Kriterien \\
+	\hline
+	FA-
+	& Das System \textbf{MUSS} dem Verwalter ermöglichen, neue Module mit relevanten Informationen wie Modulnamen, Beschreibungen und zugehörigen Veranstaltungen zu erstellen. 
+	& - \\
+	\hline
+	FA-
+	& Das System \textbf{MUSS} sicherstellen, dass bei der Erstellung von Modulen alle notwendigen Informationen validiert werden. 
+	& - \\
+	\hline
+	FA-
+	& Das System \textbf{MUSS} dem Verwalter ermöglichen, bestehende Modulinformationen zu aktualisieren. 
+	& - \\
+	\hline
+	FA-
+	& Das System \textbf{SOLL} eine Versionsgeschichte für jedes Modul führen, um Änderungen nachverfolgen und bei Bedarf frühere Versionen wiederherstellen zu können. 
+	& - \\
+	\hline
+	FA-
+	& Das System \textbf{SOLL} sicherstellen, dass Änderungen an Modulen keine negativen Auswirkungen auf die Kurszuordnung oder Stundenpläne haben. 
+	& - \\
+	\hline
+	FA-
+	& Das System \textbf{MUSS} das Entfernen von Modulen aus der Datenbank durch den Verwalter unterstützen. 
+	& - \\
+	\hline
+	FA-
+	& Das System \textbf{MUSS} eine Bestätigung vom Benutzer einholen, bevor ein Modul endgültig entfernt wird, um unbeabsichtigte Löschungen zu verhindern. 
+	& - \\
+	\hline
+	FA-
+	& Das System \textbf{SOLL} entfernte Module in einem Archiv speichern, um eine eventuelle Wiederherstellung zu ermöglichen. 
+	& - \\
+	\hline
+	FA-
+	& Das System \textbf{MUSS} sicherstellen, dass beim Entfernen von Modulen alle abhängigen Daten konsistent und fehlerfrei aktualisiert werden. 
+	& - \\
+	\hline
+\end{tabular}
+
+\newpage
+
+\begin{tabular} {|p{1,1cm}|p{11cm}|p{2,7cm}|}
+	\hline
+	ID & Anforderung & Kriterien \\
+	\hline
+	FA-
+	& Das System \textbf{MUSS} den Akteuren eine Übersicht aller Module zur Verfügung stellen, einschließlich der Informationen zu beteiligten Dozenten und Veranstaltungen. 
+	& - \\
+	\hline
+	FA-
+	& Das System \textbf{MUSS} die Modulübersicht in Echtzeit aktualisieren, um jederzeit den aktuellen Stand wiedergeben zu können. 
+	& - \\
+	\hline
+	FA-
+	& Das System \textbf{SOLL} für die Modulübersicht anpassbare Ansichten unterstützen, die es dem Benutzer ermöglichen, die Daten nach verschiedenen Kriterien zu sortieren und zu filtern. 
+	& - \\
+	\hline
+	FA-
+	& Das System \textbf{SOLL} auf die entsprechenden Stellen im Modulhandbuch verweisen. 
+	& - \\
+	\hline
+	FA-
+	& Das System \textbf{MUSS} die Integration der Module in die Stundenpläne der Studenten und Dozenten sicherstellen. 
+	& - \\
+	\hline
+	FA-
+	& Das System \textbf{MUSS} die nahtlose Integration neuer und aktualisierter Module in bestehende Stundenpläne ermöglichen, ohne dass es zu Konflikten oder Fehlern kommt. 
+	& - \\
+	\hline
+	FA-
+	& Das System \textbf{SOLL} eine Schnittstelle bieten, die es ermöglicht, Module direkt aus der Planungsansicht heraus zu verwalten. 
+	& - \\
+	\hline
+	FA-
+	& Das System \textbf{MUSS} dafür sorgen, dass die Verfügbarkeit der Stundenplan- und Moduldaten jederzeit gewährleistet ist, um kontinuierlichen Zugriff für die Benutzer zu bieten. 
+	& - \\
+	\hline
+\end{tabular}
+

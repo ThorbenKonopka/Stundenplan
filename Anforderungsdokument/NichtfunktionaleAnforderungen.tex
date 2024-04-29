@@ -1,0 +1,71 @@
+% !TeX root = Anforderungsdokument.tex
+
+\clearpage
+
+\section{Nichtfunktionale Anforderungen}
+Wir haben uns zusammengesetzt und uns Anforderungen überlegt. Die Anforderungen sollen in Form von Texten zuerst erklärt und dann mit Satzschablonen spezifiziert werden. 
+
+\vspace{6pt}
+
+Die spezifizierten Anforderungen sollen die folgenden Bedingungen erfüllen.
+\begin{itemize}
+	\item Eine Anforderung muss überprüfbar sein. Wenn eine Anforderung nicht selbst vollständig überprüfbar ist, müssen weitere Anforderungen als Kriterien definiert werden.
+	\item Jede Anforderung muss eine eindeutige ID haben. 
+	\begin{itemize}
+		\item Die ID von Funktionalen Anforderungen fängt mit \textbf{FA-} an.
+		\item Die ID von Nicht Funktionalen Anforderungen fängt mit \textbf{NFA-} an.
+	\end{itemize}
+	\item Jede Anforderung muss sich aus dem über der Tabelle stehenden Text ergeben.
+\end{itemize}
+
+Die Anforderungen wurden Schrittweise ermittelt und spezifiziert. Zuerst wurde ein Text geschrieben, dem Anforderungen entnommen werden können. Unter dem Text wurde eine Tabelle erstellt, die die aus dem Text ausgearbeiteten Anforderungen enthält.
+
+\newpage
+
+\subsection{Anforderungen an den Client}
+Es ist wichtig, dass die Termine plattformunabhängig angezeigt und geändert werden können. Termine müssen recht kurzfristig angepasst und eingesehen werden können. Das wäre z.B.: mit einem Fat-Client nicht gegeben, weil man bei der Verwendung einer Konkreten Programmiersprache in der Regel an eine oder eine Gruppe von Plattformen gebunden ist. Um kurzfristige Änderungen gewährleisten zu können, muss es möglich sein, sich z.B.: über das Handy an dem System anzumelden. Studenten sehen häufig den Stundenplan über ihr Handy ein. Zudem soll es möglich sein, dass sich alle Benutzer auch über einen Tower-PC oder einen Laptop am System anmelden können, weil dort besonders die Verwaltung angenehmer ist. Deshalb muss das System alle Funktionalitäten über Weboberflächen bereitstellen.
+
+\vspace{12pt}
+
+\begin{tabular} {|p{1,1cm}|p{11cm}|p{2,7cm}|}
+	\hline
+	ID & Anforderung & Kriterien \\
+	\hline
+	NFA-
+	& Das System \textbf{MUSS} für alle Funktionalitäten eine Weboberfläche bereitstellen. 
+	& NFA-200, NFA-300 \\
+	\hline
+	NFA-200 
+	& Die Weboberflächen \textbf{SOLLEN} auf verschiedenen Bildschirmgrößen gut aussehen.
+	& -  \\
+	\hline
+	NFA-300
+	& Die Weboberflächen \textbf{MÜSSEN} auf verschiedenen Bildschirmgrößen bedienbar sein.
+	& - \\
+	\hline
+	NFA-
+	& Die Client-Webseite \textbf{SOLL} auch bei einer langsameren Internetverbindung in einer akzeptablen Zeitspanne geladen werden.
+	& - \\
+	\hline
+\end{tabular}
+
+\newpage
+
+\subsection{Anforderungen an den Server}
+Es würde unserer Meinung nach Sinn machen, wenn man für die Funktionalitäten, die von dem Server bereitgestellt werden Schnittstellen definieren und dokumentieren würde. Dadurch könnten die Studenten selbst einen Client schreiben. Das könnte im Rahmen eines Moduls eine Aufgabe sein. 
+
+\vspace{12pt}
+
+\begin{tabular} {|p{1,1cm}|p{11cm}|p{2,7cm}|}
+	\hline
+	ID & Anforderung & Kriterien \\
+	\hline
+	NFA- 
+	& Das System \textbf{SOLL} dokumentierte Schnittstellen für die Funktionalitäten bereitstellen.
+	& - \\
+	\hline
+	NFA- 
+	& Die Business-Logik des Servers \textbf{MUSS} in der Programmiersprache Java umgesetzt werden.
+	& - \\
+	\hline
+\end{tabular}
