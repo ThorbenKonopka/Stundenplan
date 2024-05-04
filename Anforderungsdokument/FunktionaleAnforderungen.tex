@@ -2,6 +2,9 @@
 
 \clearpage
 
+\newcounter{freq}[subsection]
+\newcommand\printfreqnr{\stepcounter{freq}FA-\the\value{subsection}\num[minimum-integer-digits=2]{\thefreq}}
+
 \section{Funktionale Anforderungen}
 Wir haben uns zusammengesetzt und uns Anforderungen überlegt. Die Anforderungen sollen in Form von Texten zuerst erklärt und dann mit Satzschablonen spezifiziert werden. 
 
@@ -27,23 +30,23 @@ Wir finden, dass eine einfache Anmeldung mit Benutzername und Passwort völlig a
 
 \vspace{12pt}
 
-\begin{tabular} {|p{1,1cm}|p{11cm}|p{2,7cm}|}
+\begin{tabular} {|p{1,4cm}|p{10,7cm}|p{2,7cm}|}
 	\hline
 	ID & Anforderung & Kriterien \\
 	\hline
-	FA-
+	\printfreqnr
 	& Wenn ein unangemeldeter Benutzer das System aufruft \textbf{MUSS} Das System den Benutzer dazu auffordern sich mit seinem Benutzernamen und seinem Password anzumelden.
 	& - \\
 	\hline
-	FA- 
+	\printfreqnr
 	& Wenn ein unangemeldeter Benutzer einen richtigen Benutzernamen und das richtige Passwort eingegeben hat \textbf{MUSS} das System den Benutzer anmelden und weiterleiten.
 	& -  \\
 	\hline
-	FA- 
+	\printfreqnr
 	& Wenn ein unangemeldeter Benutzer einen falschen Benutzernamen oder ein falsches Passwort eingegeben hat, \textbf{MUSS} das System den Benutzer darauf hinweisen, dass die Anmeldung nicht erfolgreich war.
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Wenn eine Anmeldung nicht erfolgreich war, \textbf{DARF} das System \textbf{NICHT} anzeigen, welche Eingabe nicht korrekt war.
 	& - \\
 	\hline
@@ -62,39 +65,39 @@ Beim ITC werden für diese Kategorisierung die Jahrgänge und die Gruppen benutz
 
 \vspace{12pt}
 
-\begin{tabular} {|p{1,1cm}|p{11cm}|p{2,7cm}|}
+\begin{tabular} {|p{1,4cm}|p{10,7cm}|p{2,7cm}|}
 	\hline
 	ID & Anforderung & Kriterien \\
 	\hline
-	FA-
+	\printfreqnr
 	& Wenn ein unangemeldeter Benutzer das System aufruft \textbf{SOLL} das System dem Benutzer die Möglichkeit geben alle Termine einzusehen. 
-	& NFA-2, NFA-3 \\
+	& NFA-102, NFA-103 \\
 	\hline
-	FA- 
+	\printfreqnr 
 	& Wenn ein unangemeldeter Benutzer alle Termine einsieht \textbf{SOLL} das System dem Benutzer die Möglichkeit geben Jahrgänge auszuwählen.
 	& -  \\
 	\hline
-	FA- 
+	\printfreqnr 
 	& Wenn ein unangemeldeter Benutzer alle Termine einsieht \textbf{SOLL} das System dem Benutzer die Möglichkeit geben die Gruppen \texttt{A-F} und \texttt{G-L} auszuwählen.
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Wenn ein unangemeldeter Benutzer einen oder mehrere Jahrgänge ausgewählt hat, \textbf{MUSS} das System alle Termine anzeigen, die sich den ausgewählten Jahrgängen zuordnen lassen.
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Wenn ein unangemeldeter Benutzer eine oder alle Gruppen ausgewählt hat \textbf{MUSS} das System alle Termine anzeigen, die sich den ausgewählten Gruppen zuordnen lassen.
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Wenn ein unangemeldeter Benutzer sowohl Jahrgänge als auch Gruppen ausgewählt hat \textbf{MUSS} das System die Schnittmenge der beiden Termin-Menge anzeigen.
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Wenn ein unangemeldeter Benutzer keine Gruppe ausgewählt hat \textbf{MUSS} das System diesen Filter ignorieren.
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Wenn ein unangemeldeter Benutzer keine Jahrgänge ausgewählt hat \textbf{MUSS} das System diesen Filter ignorieren.
 	& - \\
 	\hline
@@ -107,11 +110,11 @@ Bei dem Einsehen von Terminen haben Studenten und Dozenten fast identische Anwen
 
 \vspace{12pt}
 
-\begin{tabular} {|p{1,1cm}|p{11cm}|p{2,7cm}|}
+\begin{tabular} {|p{1,4cm}|p{10,7cm}|p{2,7cm}|}
 	\hline
 	ID & Anforderung & Kriterien \\
 	\hline
-	FA-
+	\printfreqnr
 	& Wenn ein Angemeldeter Student oder Dozent seine Termine einsehen möchte \textbf{MUSS} das System die Termine anzeigen, die sich dem Studenten oder Dozenten zuordnen lassen. 
 	& - \\
 	\hline
@@ -124,31 +127,31 @@ Aus unserer Sicht macht es Sinn, dass ein Verwalter alle Termine einsehen kann. 
 
 \vspace{12pt}
 
-\begin{tabular} {|p{1,1cm}|p{11cm}|p{2,7cm}|}
+\begin{tabular} {|p{1,4cm}|p{10,7cm}|p{2,7cm}|}
 	\hline
 	ID & Anforderung & Kriterien \\
 	\hline
-	FA-
+	\printfreqnr
 	& Wenn ein angemeldeter Verwalter alle Termine einsehen möchte \textbf{MUSS} das System alle Termine anzeigen. 
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Wenn ein angemeldeter Verwalter alle Termine angezeigt bekommt \textbf{MUSS} dem Benutzer die Möglichkeit in einem Suchfeld eine Matrikelnummer oder einen Namen einzugeben. 
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Wenn ein angemeldeter Verwalter in dem Suchfeld mindestens einen Buchstaben eingegeben hat, \textbf{MUSS} das System mögliche Studenten, bei denen die eingegebenen Zeichen entweder bei der Matrikelnummer oder bei dem Namen übereinstimmen, auflisten und zur Auswahl bereitstellen. 
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Wenn ein angemeldeter Verwalter einen Studenten ausgewählt hat \textbf{MUSS} das System alle Termine des ausgewählten Studenten anzeigen. 
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Wenn ein angemeldeter Verwalter einen Studenten ausgewählt hat \textbf{MUSS} das System dem Verwalter die Möglichkeit geben, den Studenten als Filter zu entfernen. 
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Wenn ein angemeldeter Verwalter einen Studenten ausgewählt hat \textbf{DARF} das System \textbf{NICHT} dem Verwalter die Möglichkeit geben, einen weiteren Studenten auszuwählen. 
 	& - \\
 	\hline
@@ -173,27 +176,27 @@ Für einen angemeldeten Verwalter werden die gleichen Daten für jeden Termin an
 
 \vspace{12pt}
 
-\begin{tabular} {|p{1,1cm}|p{11cm}|p{2,7cm}|}
+\begin{tabular} {|p{1,4cm}|p{10,7cm}|p{2,7cm}|}
 	\hline
 	ID & Anforderung & Kriterien \\
 	\hline
-	FA-
+	\printfreqnr
 	& Wenn ein unangemeldeter Benutzer alle Termine angezeigt bekommt \textbf{MUSS} das System, das Datum, die Start- und Endzeit, der Dozent, die Bezeichnung des Moduls und falls vorhanden die Raumnummer anzeigen. 
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Wenn ein angemeldeter Dozent alle Termine angezeigt bekommt \textbf{MUSS} das System, das Datum, die Start- und Endzeit, die Bezeichnung des Moduls, falls vorhanden die Raumnummer und falls vorhanden der Link zu einer Onlineplattform anzeigen. 
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Wenn ein angemeldeter Student alle Termine angezeigt bekommt \textbf{MUSS} das System, das Datum, die Start- und Endzeit, der Dozent, die Bezeichnung des Moduls, falls vorhanden die Raumnummer und falls vorhanden der Link zu einer Onlineplattform anzeigen. 
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Wenn ein angemeldeter Student alle Termine angezeigt bekommt \textbf{MUSS} das System , das Datum, die Start- und Endzeit, der Dozent, die Bezeichnung des Moduls, falls vorhanden die Raumnummer und falls vorhanden der Link zu einer Onlineplattform anzeigen.
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Das System \textbf{DARF NICHT} den Link für Onlinevorlesungen für unangemeldete Benutzer anzeigen. 
 	& - \\
 	\hline
@@ -211,15 +214,15 @@ Es macht keinen Sinn, dass ein Student oder unangemeldeter Benutzer, Termine ver
 
 \vspace{12pt}
 
-\begin{tabular} {|p{1,1cm}|p{11cm}|p{2,7cm}|}
+\begin{tabular} {|p{1,4cm}|p{10,7cm}|p{2,7cm}|}
 	\hline
 	ID & Anforderung & Kriterien \\
 	\hline
-	FA-
+	\printfreqnr
 	& Das System \textbf{DARF NICHT} erlauben, dass Studenten oder unangemeldete Benutzer, Termine in irgendeiner Form verwalten. 
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Wenn ein angemeldeter Student oder ein unangemeldeter Benutzer versucht einen Termine zu verwalten (bearbeiten, erstellen oder löschen), dann \textbf{MUSS} das System weiteres Vorgehen unterbinden und dem Benutzer mitteilen, dass er nicht autorisiert ist.
 	& - \\ 
 	\hline
@@ -233,53 +236,53 @@ Ein Dozent ist maßgeblich an der Terminfindung beteiligt. Bestimmte Richtlinien
 
 \vspace{12pt}
 
-\begin{tabular} {|p{1,1cm}|p{11cm}|p{2,7cm}|}
+\begin{tabular} {|p{1,4cm}|p{10,7cm}|p{2,7cm}|}
 	\hline
 	ID & Anforderung & Kriterien \\
 	\hline
-	FA-
+	\printfreqnr
 	& Wenn ein angemeldeter Dozent Termine anlegen möchte \textbf{MUSS} das System einen neuen Vorschlag erstellen und diesen von dem Dozenten bearbeiten lassen.
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Wenn ein angemeldeter Dozent einen Vorschlag bearbeitet, \textbf{MUSS} das System den Benutzer dazu auffordern \textbf{einen} Jahrgang auszuwählen. 
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Wenn ein angemeldeter Dozent einen Vorschlag bearbeitet und ein Jahrgang ausgewählt wurde, \textbf{MUSS} das System dem Benutzer die Möglichkeit geben einen neuen Termin anzulegen.  
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Wenn ein angemeldeter Dozent einen neuen Termin anlegt, \textbf{MUSS} das System den Benutzer fragen, für welche Veranstaltung der Termin gedacht ist.
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Wenn ein angemeldeter Dozent einen neuen Termin anlegt und die Veranstaltung ausgewählt hat, \textbf{MUSS} das System den Benutzer die Möglichkeit geben, die restlichen Daten (Start- und Endzeit, Raumnummer, Link für die Vorlesung) einzutragen. 
 	& - \\
 	\hline
 \end{tabular}
 	
-\begin{tabular} {|p{1,1cm}|p{11cm}|p{2,7cm}|}
+\begin{tabular} {|p{1,4cm}|p{10,7cm}|p{2,7cm}|}
 	\hline
 	ID & Anforderung & Kriterien \\
 	\hline
-	FA-
+	\printfreqnr
 	& Wenn ein angemeldeter Dozent alle benötigten Daten eingegeben hat, \textbf{MUSS} das System verifizieren, dass der neue Termin in einem freien Zeitraum liegt.
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Wenn das System verifiziert hat, dass der Termin in einem freien Zeitraum liegt, \textbf{MUSS} das System versuchen den Termin in dem Vorschlag zu speichern.
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Das System feststellt, dass der Termin in einem belegten Zeitraum liegt, \textbf{MUSS} das System weiteres Vorgehen unterbinden und den Dozenten darauf hinweisen, dass der Termin in diesem Zeitraum nicht angelegt werden kann.
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Wenn ein angemeldeter Dozent mindestens einen Termin angelegt hat, \textbf{MUSS} das System dem Dozenten die Möglichkeit geben den Vorschlag freizugeben, damit ein Verwalter diesen einsehen kann.
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Ein Dozent \textbf{MUSS} einen seiner angelegten Termine im Nachhinein bezüglich der Raumnummer oder des Links zur Online-Veranstaltung selbst ändern können.
 	& - \\
 	\hline
@@ -293,15 +296,15 @@ Um diesen Prozess für den Dozenten so angenehm wie möglich zu machen, soll es 
 
 \vspace{12pt}
 
-\begin{tabular} {|p{1,1cm}|p{11cm}|p{2,7cm}|}
+\begin{tabular} {|p{1,4cm}|p{10,7cm}|p{2,7cm}|}
 	\hline
 	ID & Anforderung & Kriterien \\
 	\hline
-	FA-
+	\printfreqnr
 	& Wenn ein angemeldeter Dozent einen Vorschlag bearbeitet, \textbf{MUSS} das System dem Benutzer auf KI-basierende Termine Vorschlagen. 
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Wenn ein angemeldeter Dozent einen auf KI-basierenden Termin auswählt \textbf{MUSS} das System die gleichen Daten, wie bei dem Normalen anlegen fragen. Die einzige Ausnahme ist der Zeitraum. Dieser soll vor befüllt aber bearbeitbar sein. 
 	& - \\
 	\hline
@@ -315,47 +318,47 @@ Der Verwalter hat deutlich mehr recht was die Verwaltung von Terminen angeht, we
 
 \vspace{12pt}
 
-\begin{tabular} {|p{1,1cm}|p{11cm}|p{2,7cm}|}
+\begin{tabular} {|p{1,4cm}|p{10,7cm}|p{2,7cm}|}
 	\hline
 	ID & Anforderung & Kriterien \\
 	\hline
-	FA-
+	\printfreqnr
 	& Wenn ein angemeldeter Dozent einen Vorschlag eingereicht hat, \textbf{MUSS} das System dem angemeldeten Verwalter den Vorschlag anzeigen und Ihm die Möglichkeit geben den Vorschlag anzuwenden. 
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Wenn der angemeldeter Verwalter den Vorschlag anwendet, \textbf{MUSS} das System versuchen die enthaltenen Termine zu persistieren.
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Wenn der angemeldeter Verwalter den Vorschlag anwendet, \textbf{MUSS} das System sicherstellen, dass es keine Überlappungen mit anderen Terminen gibt.
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Wenn der angemeldeter Verwalter den Vorschlag ablehnt, \textbf{MUSS} das System den Verwalter dazu auffordern einen Grund anzugeben und den betroffenen Dozenten benachrichtigen.
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Wenn der angemeldeter Verwalter einen neuen Termin anlegt, \textbf{MUSS} das System sicher stellen, dass es keine Überlappungen mit anderen Terminen bei beteiligten Studenten gibt.
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Wenn es keine Überlappungen geben sollte, \textbf{MUSS} das System versuchen den Termin anzulegen.
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Wenn es Überlappungen geben sollte, \textbf{MUSS} das System den Verwalter dazu auffordern einen anderen Zeitraum zu wählen.
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Ein Verwalter \textbf{MUSS} ebenfalls die Möglichkeit haben Termine über einen Vorschlag mit dem Dozenten abzustimmen.
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Wenn ein Verwalter versucht einen Termin zu verändern oder zu löschen \textbf{MUSS} das System versuchen den Termin zu verändern oder zu löschen.
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Wenn ein Verwalter versucht einen Termin zu verändern \textbf{MUSS} das System sicher stellen, dass es keine Überlappungen mit anderen Terminen gibt.
 	& - \\
 	\hline
@@ -370,15 +373,15 @@ Ein angemeldeter Student oder ein unangemeldeter Benutzer darf unter keinen Umst
 
 \vspace{12pt}
 
-\begin{tabular} {|p{1,1cm}|p{11cm}|p{2,7cm}|}
+\begin{tabular} {|p{1,4cm}|p{10,7cm}|p{2,7cm}|}
 	\hline
 	ID & Anforderung & Kriterien \\
 	\hline
-	FA-
+	\printfreqnr
 	& Das System \textbf{DARF NICHT} erlauben, dass Studenten oder unangemeldete Benutzer, Termine in irgendeiner Form verschieben. 
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Wenn ein angemeldeter Student oder ein unangemeldeter Benutzer versucht einen Termine zu verschieben, dann \textbf{MUSS} das System weiteres Vorgehen unterbinden und dem Benutzer mitteilen, dass er nicht autorisiert ist.
 	& - \\ 
 	\hline
@@ -392,19 +395,19 @@ Ein Dozent darf Termine in ihrer Uhrzeit selbst verschieben, soll aber für Änd
 
 \vspace{12pt}
 
-\begin{tabular} {|p{1,1cm}|p{11cm}|p{2,7cm}|}
+\begin{tabular} {|p{1,4cm}|p{10,7cm}|p{2,7cm}|}
 	\hline
 	ID & Anforderung & Kriterien \\
 	\hline
-	FA-
+	\printfreqnr
 	& Ein Dozent \textbf{MUSS} die Uhrzeit eines Termins ändern können.
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Ein Dozent \textbf{DARF NICHT} selbst das Datum eines Termins ändern.
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Ein Dozent \textbf{MUSS} eine Anfrage zum Ändern des Datums eines Termins an die Verwaltung stellen können.
 	& - \\
 	\hline
@@ -418,23 +421,23 @@ Ein Verwalter darf Termine selbst beliebig verschieben und muss die von Dozenten
 
 \vspace{12pt}
 
-\begin{tabular} {|p{1,1cm}|p{11cm}|p{2,7cm}|}
+\begin{tabular} {|p{1,4cm}|p{10,7cm}|p{2,7cm}|}
 	\hline
 	ID & Anforderung & Kriterien \\
 	\hline
-	FA-
+	\printfreqnr
 	& Ein Verwalter \textbf{MUSS} einen Termin in seiner Uhrzeit und seinem Datum verschieben können.
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Ein Verwalter \textbf{MUSS} die gestellten Datumsänderungsanfragen von Dozenten einsehen können.
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Ein Verwalter \textbf{MUSS} die Verschiebe-Anfragen von Dozenten annehmen oder ablehnen können, je nachdem, ob sich diese mit anderen Terminen überschneiden oder durch den neuen Termin Richtlinien verletzt werden würden.
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Ein Verwalter \textbf{MUSS} die durchgeführten Uhrzeitänderungen von Dozenten einsehen können und diese rückgängig machen, falls diese zu Konflikten führen.
 	& - \\
 	\hline
@@ -449,15 +452,15 @@ Angemeldete Studenten und unangemeldete Benutzer dürfen unter keinen Umständen
 
 \vspace{12pt}
 
-\begin{tabular} {|p{1,1cm}|p{11cm}|p{2,7cm}|}
+\begin{tabular} {|p{1,4cm}|p{10,7cm}|p{2,7cm}|}
 	\hline
 	ID & Anforderung & Kriterien \\
 	\hline
-	FA-
+	\printfreqnr
 	& Das System \textbf{DARF NICHT} erlauben, dass Studenten oder unangemeldete Benutzer, Anwesenheitslisten in irgendeiner Form verwalten oder einsehen. 
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Wenn ein angemeldeter Student oder ein unangemeldeter Benutzer versucht eine Anwesenheitsliste zu verwalten oder einzusehen, dann \textbf{MUSS} das System weiteres Vorgehen unterbinden und dem Benutzer mitteilen, dass er nicht autorisiert ist.
 	& - \\ 
 	\hline
@@ -472,15 +475,15 @@ Ein unangemeldeter Benutzer darf unter keinen Umständen die Fehlzeiten von ande
 
 \vspace{12pt}
 
-\begin{tabular} {|p{1,1cm}|p{11cm}|p{2,7cm}|}
+\begin{tabular} {|p{1,4cm}|p{10,7cm}|p{2,7cm}|}
 	\hline
 	ID & Anforderung & Kriterien \\
 	\hline
-	FA-
+	\printfreqnr
 	& Das System \textbf{DARF NICHT} erlauben, dass unangemeldete Benutzer, Fehlzeiten in irgendeiner Form einsehen. 
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Wenn ein unangemeldeter Benutzer versucht einen Fehlzeiten einzusehen, \textbf{MUSS} das System weiteres Vorgehen unterbinden und dem Benutzer mitteilen, dass er nicht autorisiert ist.
 	& - \\ 
 	\hline
@@ -489,15 +492,15 @@ Ein unangemeldeter Benutzer darf unter keinen Umständen die Fehlzeiten von ande
 \vspace{12pt}
 
 \subsubsection{Angemeldeter Student}
-\begin{tabular} {|p{1,1cm}|p{11cm}|p{2,7cm}|}
+\begin{tabular} {|p{1,4cm}|p{10,7cm}|p{2,7cm}|}
 	\hline
 	ID & Anforderung & Kriterien \\
 	\hline
-	FA-
+	\printfreqnr
 	& Ein Student \textbf{MUSS} seine Fehlzeiten einsehen können. 
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Die angezeigten Fehlzeiten \textbf{MÜSSEN} notwendige Informationen über den Termin enthalten.
 	& - \\ 
 	\hline
@@ -506,11 +509,11 @@ Ein unangemeldeter Benutzer darf unter keinen Umständen die Fehlzeiten von ande
 \vspace{12pt}
 
 \subsubsection{Angemeldeter Dozent}
-\begin{tabular} {|p{1,1cm}|p{11cm}|p{2,7cm}|}
+\begin{tabular} {|p{1,4cm}|p{10,7cm}|p{2,7cm}|}
 	\hline
 	ID & Anforderung & Kriterien \\
 	\hline
-	FA-
+	\printfreqnr
 	& Ein Dozent \textbf{DARF NICHT} Fehlzeiten einsehen. Hier ist die Anwesenheitsliste eine Ausnahme. 
 	& - \\
 	\hline
@@ -519,19 +522,19 @@ Ein unangemeldeter Benutzer darf unter keinen Umständen die Fehlzeiten von ande
 \vspace{12pt}
 
 \subsubsection{Angemeldeter Verwalter}
-\begin{tabular} {|p{1,1cm}|p{11cm}|p{2,7cm}|}
+\begin{tabular} {|p{1,4cm}|p{10,7cm}|p{2,7cm}|}
 	\hline
 	ID & Anforderung & Kriterien \\
 	\hline
-	FA-
+	\printfreqnr
 	& Ein Verwalter \textbf{MUSS} alle Fehlzeiten einsehen können. 
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Ein Verwalter \textbf{MUSS} alle Fehlzeiten zu einem spezifizierten Studenten in Erfahrung bringen können.
 	& - \\ 
 	\hline
-	FA-
+	\printfreqnr
 	& Wenn ein Verwalter anfängt die Matrikelnummer oder den Namen des Studenten einzugeben, \textbf{MUSS} das System passende Studenten vorschlagen.
 	& - \\ 
 	\hline
@@ -540,109 +543,168 @@ Ein unangemeldeter Benutzer darf unter keinen Umständen die Fehlzeiten von ande
 \newpage
 
 \subsection{Benutzer verwalten}
-\begin{tabular} {|p{1,1cm}|p{11cm}|p{2,7cm}|}
+Die Anmeldedaten und Berechtigungen von Studenten, Dozenten und Verwalter, zusammengefasst die Benutzer des Systems, müssen verwaltet werden können.
+
+Nur angemeldete Benutzer in der Rolle Verwalter sollen dazu in der Lage sein.
+
+\vspace{12pt}
+
+\subsubsection{Unangemeldete Benutzer, Studenten und Dozenten}
+Normale Benutzer dürfen keine anderen Benutzer hinzufügen oder solche wie auch sich selbst bearbeiten oder löschen.
+
+\vspace{12pt}
+
+
+\begin{tabular} {|p{1,4cm}|p{10,7cm}|p{2,7cm}|}
 	\hline
 	ID & Anforderung & Kriterien \\
 	\hline
-	FA-
+	\printfreqnr
+	& Das System \textbf{DARF NICHT} erlauben, dass Benutzer, die keine Verwalter sind, andere Benutzer oder sich selbst verwalten. 
+	& - \\
+	\hline
+	\printfreqnr
+	& Wenn ein nicht-autorisierter Benutzer versucht, Benutzer zu bearbeiten, \textbf{MUSS} das System eine Fehlermeldung zurückgeben.
+	& - \\ 
+	\hline
+	\printfreqnr
+	& Die Fehlermeldung \textbf{DARF} dem nicht autorisierten Benutzer \textbf{NICHT} mitteilen, dass der aktuelle Endpunkt zum Verwalten von Benutzern genutzt wird.
+	& - \\ 
+	\hline
+\end{tabular}
+
+\vspace{12pt}
+
+\subsubsection{Angemeldeter Verwalter}
+Es ist die Aufgabe der Verwalter, die Benutzerkonten für das System zu pflegen:
+
+Sie müssen in der Lage sein, Benutzerkonten anzulegen, zu bearbeiten und wieder zu entfernen.
+
+\vspace{12pt}
+
+\begin{tabular} {|p{1,4cm}|p{10,7cm}|p{2,7cm}|}
+	\hline
+	ID & Anforderung & Kriterien \\
+	\hline
+	\printfreqnr
+	& Das System \textbf{SOLL} den Verwaltern eine Liste der im System vorhandenen Benutzer anzeigen.
+	& - \\ 
+	\hline
+	\printfreqnr
 	& Ein Verwalter \textbf{MUSS} neue Benutzerkonten anlegen können. 
 	& - \\
 	\hline
-	FA-
-	& Das System \textbf{MUSS} die Erstellung von Benutzerkonten innerhalb von 5 Sekunden nach Eingabe der erforderlichen Daten ermöglichen, um eine schnelle Einrichtung zu gewährleisten. 
+	\printfreqnr
+	& Der Verwalter \textbf{MUSS} dabei alle Informationen zum Benutzer (Anmelde- und Anzeigename, E-Mail-Adresse, Rolle + weitere Rollen-spezifische Angaben) in einer Eingabemaske erfassen können.
 	& - \\ 
 	\hline
-	FA-
-	& Das System \textbf{SOLL} bei der Erstellung von Benutzerkonten eine SSL-verschlüsselte Verbindung verwenden, um die Sicherheit der Daten zu gewährleisten.
+	\printfreqnr
+	& Für einen Studenten \textbf{MÜSSEN} die belegten Module angegeben werden können.
 	& - \\ 
 	\hline
-	FA-
-	& Das System \textbf{MUSS} Verwaltern die Aktualisierung von Benutzerinformationen wie Name, E-Mail-Adresse und Rolle ermöglichen.
-	& - \\ 
-	\hline
-	FA-
-	& Das System \textbf{MUSS} sicherstellen, dass Änderungen an Benutzerkonten entsprechend den Datenschutzrichtlinien protokolliert werden.
-	& - \\ 
-	\hline
-	FA-
-	& Das System \textbf{SOLL} eine benutzerfreundliche Schnittstelle zur Aktualisierung von Benutzerinformationen bieten, die ohne spezielle Schulung bedienbar ist.
-	& - \\ 
-	\hline
-	FA-
-	& Wenn ein Verwalter ein Benutzerkonto löschen möchte, \textbf{SOLL} das System eine Bestätigung einholen, um unbeabsichtigte Löschungen zu vermeiden.
-	& - \\ 
-	\hline
-	FA-
-	& Das System \textbf{MUSS} gelöschte Benutzerdaten gemäß den gesetzlichen Aufbewahrungsfristen speichern, bevor sie endgültig entfernt werden.
-	& - \\ 
-	\hline
-	FA-
-	& Das System \textbf{SOLL} regelmäßig Backups der Benutzerdaten erstellen, um Datenverlust bei einem Fehler zu verhindern.
-	& - \\ 
-	\hline
-	FA-
-	& Das System \textbf{MUSS} die Bestätigungsanforderung klar und verständlich darstellen, um Fehlbedienungen zu minimieren.
+	\printfreqnr
+	& Für einen Dozenten \textbf{MÜSSEN} die Veranstaltungen angegeben werden können, die der neue Dozent übernehmen soll.
 	& - \\ 
 	\hline
 \end{tabular}
 
 \newpage
 
-\begin{tabular} {|p{1,1cm}|p{11cm}|p{2,7cm}|}
+\begin{tabular} {|p{1,4cm}|p{10,7cm}|p{2,7cm}|}
 	\hline
 	ID & Anforderung & Kriterien \\
 	\hline
-	FA-
+	\printfreqnr
+	& Das System \textbf{MUSS} die Erstellung von Benutzerkonten innerhalb von 5 Sekunden nach Eingabe der erforderlichen Daten ermöglichen, um eine schnelle Einrichtung zu gewährleisten. 
+	& - \\ 
+	\hline
+	\printfreqnr
+	& Das System \textbf{SOLL} bei der Erstellung von Benutzerkonten eine SSL-verschlüsselte Verbindung verwenden, um die Sicherheit der Daten zu gewährleisten.
+	& - \\ 
+	\hline
+	\printfreqnr
+	& Das System \textbf{MUSS} Verwaltern die Aktualisierung von Benutzerinformationen wie Name, E-Mail-Adresse und Rolle ermöglichen.
+	& - \\ 
+	\hline
+	\printfreqnr
+	& Die Eingabemaske zum Aktualisieren der Benutzerdaten \textbf{SOLL} Verwaltern die bisherigen Daten anzeigen.
+	& - \\ 
+	\hline
+	\printfreqnr
+	& Das System \textbf{MUSS} sicherstellen, dass Änderungen an Benutzerkonten entsprechend den Datenschutzrichtlinien protokolliert werden.
+	& - \\ 
+	\hline
+	\printfreqnr
+	& Das System \textbf{SOLL} eine benutzerfreundliche Schnittstelle zur Aktualisierung von Benutzerinformationen bieten, die ohne spezielle Schulung bedienbar ist.
+	& - \\ 
+	\hline
+	\printfreqnr
+	& Wenn ein Verwalter ein Benutzerkonto löschen möchte, \textbf{SOLL} das System eine Bestätigung einholen, um unbeabsichtigte Löschungen zu vermeiden.
+	& - \\ 
+	\hline
+	\printfreqnr
+	& Das System \textbf{MUSS} gelöschte Benutzerdaten gemäß den gesetzlichen Aufbewahrungsfristen speichern, bevor sie endgültig entfernt werden.
+	& - \\ 
+	\hline
+	\printfreqnr
+	& Das System \textbf{SOLL} regelmäßig Backups der Benutzerdaten erstellen, um Datenverlust bei einem Fehler zu verhindern.
+	& - \\ 
+	\hline
+	\printfreqnr
+	& Das System \textbf{MUSS} die Bestätigungsanforderung klar und verständlich darstellen, um Fehlbedienungen zu minimieren.
+	& - \\ 
+	\hline
+	\printfreqnr
 	& Das System \textbf{MUSS} allen Akteuren außer dem Gast  ermöglichen, Passwörter für Benutzerkonten zurückzusetzen. 
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Das System \textbf{MUSS} einen sicheren Prozess für das Zurücksetzen von Passwörtern bieten, einschließlich der Bestätigung durch eine Zwei-Faktor-Authentifizierung. 
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Das System \textbf{SOLL} in der Lage sein, das Zurücksetzen von Passwörtern innerhalb von 60 Sekunden durchzuführen. 
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Das System \textbf{SOLL} bei der Passwortrücksetzung starke Passwörter gemäß den aktuellen Sicherheitsstandards erzwingen. 
 	& - \\
 	\hline
 \end{tabular}
 
-%\newpage
-\vspace{18pt}
+\newpage
+%\vspace{18pt}
 
 \subsection{Veranstaltungen verwalten}
-\begin{tabular} {|p{1,1cm}|p{11cm}|p{2,7cm}|}
+\begin{tabular} {|p{1,4cm}|p{10,7cm}|p{2,7cm}|}
 	\hline
 	ID & Anforderung & Kriterien \\
 	\hline
-	FA-
+	\printfreqnr
 	& Das System \textbf{SOLL} dem Verwalter ermöglichen, neue Veranstaltungen mit Details hinzuzufügen. 
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Das System \textbf{MUSS} die Erstellung neuer Veranstaltungen innerhalb von maximal 10 Sekunden ermöglichen, um eine effiziente Verwaltung zu gewährleisten. 
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Das System \textbf{MUSS} sicherstellen, dass Veranstaltungsdaten über sichere Protokolle (wie HTTPS) übertragen werden, um die Integrität und Vertraulichkeit der Informationen zu schützen. 
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Das System \textbf{SOLL} in der Lage sein, eine unbegrenzte Anzahl von Veranstaltungen zu unterstützen, ohne an Leistung zu verlieren. 
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Das System \textbf{MUSS} das Bearbeiten von Veranstaltungsdetails durch den Verwalter ermöglichen. 
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Das System \textbf{MUSS} Änderungen an Veranstaltungsdetails sofort in allen abhängigen Systemen und Ansichten aktualisieren, um Konsistenz zu gewährleisten. 
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Das System \textbf{MUSS} Benutzerschnittstellen bereitstellen, die intuitiv und ohne zusätzliche Schulung zu bedienen sind. 
 	& - \\
 	\hline
@@ -650,39 +712,39 @@ Ein unangemeldeter Benutzer darf unter keinen Umständen die Fehlzeiten von ande
 
 \newpage
 
-\begin{tabular} {|p{1,1cm}|p{11cm}|p{2,7cm}|}
+\begin{tabular} {|p{1,4cm}|p{10,7cm}|p{2,7cm}|}
 	\hline
 	ID & Anforderung & Kriterien \\
 	\hline
-	FA-
+	\printfreqnr
 	& Das System \textbf{SOLL} dem Verwalter ermöglichen, Veranstaltungen aus dem System zu entfernen. 
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Das System \textbf{MUSS} eine Warnmeldung anzeigen und eine Bestätigung verlangen, bevor eine Veranstaltung endgültig gelöscht wird, um unbeabsichtigte Löschungen zu verhindern. 
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Das System \textbf{SOLL} gelöschte Veranstaltungen in einem Archiv für einen definierten Zeitraum speichern, um eine mögliche Wiederherstellung zu ermöglichen. 
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Das System \textbf{MUSS} sicherstellen, dass die Löschung von Veranstaltungen keine Auswirkungen auf die Gesamtstabilität des Systems hat. 
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Das System \textbf{SOLL} eine Übersicht aller geplanten Veranstaltungen bieten, die jeder Akteur einsehen kann. 
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Das System \textbf{MUSS} die Übersicht aller Veranstaltungen in Echtzeit darstellen, um aktuelle Informationen bereitzustellen. 
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Das System \textbf{SOLL} anpassbare Filter für die Veranstaltungsansicht bereitstellen, um eine individuelle Ansicht zu ermöglichen. 
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Das System \textbf{MUSS} die Übersichtsseite so gestalten, dass sie auch bei einer großen Anzahl von Einträgen performant bleibt. 
 	& - \\
 	\hline
@@ -691,43 +753,43 @@ Ein unangemeldeter Benutzer darf unter keinen Umständen die Fehlzeiten von ande
 \newpage
 
 \subsection{Module verwalten}
-\begin{tabular} {|p{1,1cm}|p{11cm}|p{2,7cm}|}
+\begin{tabular} {|p{1,4cm}|p{10,7cm}|p{2,7cm}|}
 	\hline
 	ID & Anforderung & Kriterien \\
 	\hline
-	FA-
+	\printfreqnr
 	& Das System \textbf{MUSS} dem Verwalter ermöglichen, neue Module mit relevanten Informationen wie Modulnamen, Beschreibungen und zugehörigen Veranstaltungen zu erstellen. 
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Das System \textbf{MUSS} sicherstellen, dass bei der Erstellung von Modulen alle notwendigen Informationen validiert werden. 
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Das System \textbf{MUSS} dem Verwalter ermöglichen, bestehende Modulinformationen zu aktualisieren. 
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Das System \textbf{SOLL} eine Versionsgeschichte für jedes Modul führen, um Änderungen nachverfolgen und bei Bedarf frühere Versionen wiederherstellen zu können. 
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Das System \textbf{SOLL} sicherstellen, dass Änderungen an Modulen keine negativen Auswirkungen auf die Kurszuordnung oder Stundenpläne haben. 
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Das System \textbf{MUSS} das Entfernen von Modulen aus der Datenbank durch den Verwalter unterstützen. 
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Das System \textbf{MUSS} eine Bestätigung vom Benutzer einholen, bevor ein Modul endgültig entfernt wird, um unbeabsichtigte Löschungen zu verhindern. 
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Das System \textbf{SOLL} entfernte Module in einem Archiv speichern, um eine eventuelle Wiederherstellung zu ermöglichen. 
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Das System \textbf{MUSS} sicherstellen, dass beim Entfernen von Modulen alle abhängigen Daten konsistent und fehlerfrei aktualisiert werden. 
 	& - \\
 	\hline
@@ -735,39 +797,39 @@ Ein unangemeldeter Benutzer darf unter keinen Umständen die Fehlzeiten von ande
 
 \newpage
 
-\begin{tabular} {|p{1,1cm}|p{11cm}|p{2,7cm}|}
+\begin{tabular} {|p{1,4cm}|p{10,7cm}|p{2,7cm}|}
 	\hline
 	ID & Anforderung & Kriterien \\
 	\hline
-	FA-
+	\printfreqnr
 	& Das System \textbf{MUSS} den Akteuren eine Übersicht aller Module zur Verfügung stellen, einschließlich der Informationen zu beteiligten Dozenten und Veranstaltungen. 
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Das System \textbf{MUSS} die Modulübersicht in Echtzeit aktualisieren, um jederzeit den aktuellen Stand wiedergeben zu können. 
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Das System \textbf{SOLL} für die Modulübersicht anpassbare Ansichten unterstützen, die es dem Benutzer ermöglichen, die Daten nach verschiedenen Kriterien zu sortieren und zu filtern. 
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Das System \textbf{SOLL} auf die entsprechenden Stellen im Modulhandbuch verweisen. 
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Das System \textbf{MUSS} die Integration der Module in die Stundenpläne der Studenten und Dozenten sicherstellen. 
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Das System \textbf{MUSS} die nahtlose Integration neuer und aktualisierter Module in bestehende Stundenpläne ermöglichen, ohne dass es zu Konflikten oder Fehlern kommt. 
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Das System \textbf{SOLL} eine Schnittstelle bieten, die es ermöglicht, Module direkt aus der Planungsansicht heraus zu verwalten. 
 	& - \\
 	\hline
-	FA-
+	\printfreqnr
 	& Das System \textbf{MUSS} dafür sorgen, dass die Verfügbarkeit der Stundenplan- und Moduldaten jederzeit gewährleistet ist, um kontinuierlichen Zugriff für die Benutzer zu bieten. 
 	& - \\
 	\hline
