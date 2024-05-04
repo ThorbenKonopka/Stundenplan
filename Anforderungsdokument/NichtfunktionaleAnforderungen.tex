@@ -2,6 +2,9 @@
 
 \clearpage
 
+\newcounter{nfreq}[subsection]
+\newcommand\printnfreqnr{\stepcounter{nfreq}NFA-\the\value{subsection}\num[minimum-integer-digits=2]{\thenfreq}}
+
 \section{Nichtfunktionale Anforderungen}
 Wir haben uns zusammengesetzt und uns Anforderungen überlegt. Die Anforderungen sollen in Form von Texten zuerst erklärt und dann mit Satzschablonen spezifiziert werden. 
 
@@ -27,23 +30,23 @@ Es ist wichtig, dass die Termine plattformunabhängig angezeigt und geändert we
 
 \vspace{12pt}
 
-\begin{tabular} {|p{1,1cm}|p{11cm}|p{2,7cm}|}
+\begin{tabular} {|p{1,6cm}|p{10,5cm}|p{2,7cm}|}
 	\hline
 	ID & Anforderung & Kriterien \\
 	\hline
-	NFA-
+	\printnfreqnr
 	& Das System \textbf{MUSS} für alle Funktionalitäten eine Weboberfläche bereitstellen. 
-	& NFA-200, NFA-300 \\
+	& NFA-102, NFA-103 \\
 	\hline
-	NFA-200 
+	\printnfreqnr
 	& Die Weboberflächen \textbf{SOLLEN} auf verschiedenen Bildschirmgrößen gut aussehen.
 	& -  \\
 	\hline
-	NFA-300
+	\printnfreqnr
 	& Die Weboberflächen \textbf{MÜSSEN} auf verschiedenen Bildschirmgrößen bedienbar sein.
 	& - \\
 	\hline
-	NFA-
+	\printnfreqnr
 	& Die Client-Webseite \textbf{SOLL} auch bei einer langsameren Internetverbindung in einer akzeptablen Zeitspanne geladen werden.
 	& - \\
 	\hline
@@ -56,15 +59,15 @@ Es würde unserer Meinung nach Sinn machen, wenn man für die Funktionalitäten,
 
 \vspace{12pt}
 
-\begin{tabular} {|p{1,1cm}|p{11cm}|p{2,7cm}|}
+\begin{tabular} {|p{1,6cm}|p{10,5cm}|p{2,7cm}|}
 	\hline
 	ID & Anforderung & Kriterien \\
 	\hline
-	NFA- 
+	\printnfreqnr 
 	& Das System \textbf{SOLL} dokumentierte Schnittstellen für die Funktionalitäten bereitstellen.
 	& - \\
 	\hline
-	NFA- 
+	\printnfreqnr 
 	& Die Business-Logik des Servers \textbf{MUSS} in der Programmiersprache Java umgesetzt werden.
 	& - \\
 	\hline
@@ -76,15 +79,15 @@ Der Stundenplan ist nur ein Teil der gesamten Funktionalitäten, die durch das S
 
 \vspace{12pt}
 
-\begin{tabular} {|p{1,1cm}|p{11cm}|p{2,7cm}|}
+\begin{tabular} {|p{1,6cm}|p{10,5cm}|p{2,7cm}|}
 	\hline
 	ID & Anforderung & Kriterien \\
 	\hline
-	NFA- 
+	\printnfreqnr
 	& Das System \textbf{MUSS} erweiterbar sein.
 	& - \\
 	\hline
-	NFA- 
+	\printnfreqnr
 	& Das Backend \textbf{MUSS} mit Java implementiert werden.
 	& - \\
 	\hline
