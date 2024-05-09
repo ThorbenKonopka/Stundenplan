@@ -483,6 +483,74 @@ Angemeldete Studenten und unangemeldete Benutzer dürfen unter keinen Umständen
 
 \newpage
 
+\subsubsection{Angemeldeter Dozent}
+Das Eintragen der Anwesenheit eines Studenten durch den Dozenten stellt eine Kernfunktionalität der Software da. Der Dozent sollte im Zeitraum der Vorlesung in der Lage sein, auf verschiedene Arten mit der Anwesenheitsliste interagieren zu können. Pro Student soll es ebenfalls möglich sein, Kommentare zu hinterlegen, falls es zu besonderen Umständen kommt, die nicht akkurat mit der Anwesenheitsliste abgebildet werden können. Die Bearbeitung einer Anwesenheitsliste soll im nur dem Zeitraum der entsprechenden Termins möglich seien, da für nachträgliche Bearbeitung nur ein Verwalter berechtigt seien soll.
+\vspace{12pt}
+
+\begin{tabular} {|p{1,4cm}|p{10,7cm}|p{2,7cm}|}
+	\hline
+	ID & Anforderung & Kriterien \\
+	\hline
+	\printfreqnr
+	& Ein Dozent \textbf{SOLL} auf der Startseite einen anklickbaren Reiter haben, welcher die Anwesenheitsliste seines aktuellen Termins öffnet.
+	& - \\
+	\hline
+	\printfreqnr
+	& Das System \textbf{SOLL} einen Termionn als aktuell erkennen, wenn die Systemzeit im Zeitrahmen des Termins liegt, inklusive mehrere Minuten Puffer vor dem Terminanfang und nach dem Terminende.
+	& - \\
+	\hline
+	\printfreqnr
+	& Ein Dozent \textbf{SOLL} auf der Anwesenheitsliste einen Reiter für vergangene Termine haben, auf welcher er die Anwesenheitsliste dieser einsehen kann.
+	& - \\
+	\hline
+	\printfreqnr
+	& Ein Dozent \textbf{SOLL} nur im Zeitrahmen eines Termins in der Lage sein, die jeweilige Anwesenheitsliste zu bearbeiten.
+	& - \\
+	\hline
+	\printfreqnr
+	& Ein Dozent \textbf{MUSS} in der Lage sein, die Anwesenheit eines Studenten einzutragen.
+	& - \\
+	\hline
+	\printfreqnr
+	& Ein Dozent \textbf{MUSS} in der Lage sein, den Eintrag der Anwesenheit eines Studenten im Laufe des Termins bearbeiten zu können. 
+	& - \\
+	\hline
+	\printfreqnr
+	& Ein Dozent \textbf{MUSS} in der Lage sein, den aktuellen Stand der Anwesenheitsliste einsehen zu können.
+	& - \\
+	\hline
+	\printfreqnr
+	& Ein Dozent \textbf{MUSS} in der Lage sein, pro Termin für jeden Studenten Kommentare hinterlegen zu können.
+	& - \\
+	\hline
+\end{tabular}
+
+\newpage
+
+\subsubsection{Angemeldeter Verwalter}
+Wenn ein Student fälschlicherweise eingetragen/nicht eingetragen wurde, muss ein Verwalter in der Lage sein, dies nachträglich zu bearbeiten. Ebenfalls soll der Verwalter die hinterlegten Kommentare einsehen zu können.
+\vspace{12pt}
+
+\begin{tabular} {|p{1,4cm}|p{10,7cm}|p{2,7cm}|}
+	\hline
+	ID & Anforderung & Kriterien \\
+	\hline
+	\printfreqnr
+	& Ein Verwalter \textbf{SOLL} auf der Startseite einen anklickbaren Reiter haben, welche eine Übersicht aller Termine öffnet.
+	& - \\
+	\hline
+	\printfreqnr
+	& Ein Verwalter \textbf{MUSS} in der Lage sein, eine Anwesenheitsliste nachträglich bearbeiten zu können
+	& - \\
+	\hline
+	\printfreqnr
+	& Ein Verwalter \textbf{MUSS} in der Lage sein, die hinterlegten Kommentare einer Anwesenheitsliste einsehen zu können.
+	& - \\
+	\hline
+\end{tabular}
+
+\newpage
+
 \subsection{Fehlzeiten einsehen}
 Eine Fehlzeit ist ein Termin, bei dem der Student hätte da sein müssen. Die Fehlzeiten werden hauptsächlich von dem System selbst erzeugt. Dafür werden neue Anwesenheitslisten von Terminen Ausgewertet. Diese Auswertung findet jede Nacht statt. Ausgewertet werden nur neue oder bearbeitete Anwesenheitslisten. Bei neuen Anwesenheitslisten werden auch neue Fehlzeiten erzeugt. Bei Aktualisierungen wird lediglich die Konsistenz überprüft. Bei erzeugten Fehlzeiten gibt es einen Status. Es gibt \texttt{Unentschuldigt} oder \texttt{Entschuldigt}. Alle neu hinzugefügten Fehlzeiten sind zuerst Unentschuldigt. Wenn eine Fehlzeit existiert war der Student nicht anwesend. Über die Anwesenheitsliste kann der Status \textbf{NICHT} aktiv gesetzt werden. Sollte eine Anwesenheitsliste bearbeitet worden sein, so wird diese nachts erneut ausgewertet. Dabei werden lediglich die ausgewerteten Fehlzeiten mit den existierenden überprüft. Sollten hierbei Inkonsistenzen auffallen, so werden alle Verwalter über die Inkonsistenz benachrichtigt. Zudem findet die Prüfung auf Inkonsistenzen jeden Montag Morgen statt. Hierbei werden aber alle Anwesenheitslisten auf Inkonsistenzen geprüft. Diese vollständige Prüfung findet Montag statt, weil die Fehlzeiten spätestens Samstag Abend erzeugt werden. Zudem wird davon ausgegangen, dass das System am Montag Morgen wenig Ausgelastet ist. Bei der Prüfung wird geprüft, dass jede Fehlzeit aus allen Anwesenheitslisten erzeugt wurden und dass jede erzeugte Fehlzeit einer Anwesenheitsliste zugeordnet werden kann. Falls hierbei Inkonsistenzen gefunden werden, werden alle Verwalter benachrichtigt. 
 
