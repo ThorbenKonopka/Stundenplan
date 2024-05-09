@@ -468,6 +468,74 @@ Angemeldete Studenten und unangemeldete Benutzer dürfen unter keinen Umständen
 
 \newpage
 
+\subsubsection{Angemeldeter Dozent}
+Das Eintragen der Anwesenheit eines Studenten durch den Dozenten stellt eine Kernfunktionalität der Software da. Der Dozent sollte im Zeitraum der Vorlesung in der Lage sein, auf verschiedene Arten mit der Anwesenheitsliste interagieren zu können. Pro Student soll es ebenfalls möglich sein, Kommentare zu hinterlegen, falls es zu besonderen Umständen kommt, die nicht akkurat mit der Anwesenheitsliste abgebildet werden können. Die Bearbeitung einer Anwesenheitsliste soll im nur dem Zeitraum der entsprechenden Termins möglich seien, da für nachträgliche Bearbeitung nur ein Verwalter berechtigt seien soll.
+\vspace{12pt}
+
+\begin{tabular} {|p{1,4cm}|p{10,7cm}|p{2,7cm}|}
+	\hline
+	ID & Anforderung & Kriterien \\
+	\hline
+	\printfreqnr
+	& Ein Dozent \textbf{SOLL} auf der Startseite einen anklickbaren Reiter haben, welcher die Anwesenheitsliste seines aktuellen Termins öffnet.
+	& - \\
+	\hline
+	\printfreqnr
+	& Das System \textbf{SOLL} einen Termionn als aktuell erkennen, wenn die Systemzeit im Zeitrahmen des Termins liegt, inklusive mehrere Minuten Puffer vor dem Terminanfang und nach dem Terminende.
+	& - \\
+	\hline
+	\printfreqnr
+	& Ein Dozent \textbf{SOLL} auf der Anwesenheitsliste einen Reiter für vergangene Termine haben, auf welcher er die Anwesenheitsliste dieser einsehen kann.
+	& - \\
+	\hline
+	\printfreqnr
+	& Ein Dozent \textbf{SOLL} nur im Zeitrahmen eines Termins in der Lage sein, die jeweilige Anwesenheitsliste zu bearbeiten.
+	& - \\
+	\hline
+	\printfreqnr
+	& Ein Dozent \textbf{MUSS} in der Lage sein, die Anwesenheit eines Studenten einzutragen.
+	& - \\
+	\hline
+	\printfreqnr
+	& Ein Dozent \textbf{MUSS} in der Lage sein, den Eintrag der Anwesenheit eines Studenten im Laufe des Termins bearbeiten zu können. 
+	& - \\
+	\hline
+	\printfreqnr
+	& Ein Dozent \textbf{MUSS} in der Lage sein, den aktuellen Stand der Anwesenheitsliste einsehen zu können.
+	& - \\
+	\hline
+	\printfreqnr
+	& Ein Dozent \textbf{MUSS} in der Lage sein, pro Termin für jeden Studenten Kommentare hinterlegen zu können.
+	& - \\
+	\hline
+\end{tabular}
+
+\newpage
+
+\subsubsection{Angemeldeter Verwalter}
+Wenn ein Student fälschlicherweise eingetragen/nicht eingetragen wurde, muss ein Verwalter in der Lage sein, dies nachträglich zu bearbeiten. Ebenfalls soll der Verwalter die hinterlegten Kommentare einsehen zu können.
+\vspace{12pt}
+
+\begin{tabular} {|p{1,4cm}|p{10,7cm}|p{2,7cm}|}
+	\hline
+	ID & Anforderung & Kriterien \\
+	\hline
+	\printfreqnr
+	& Ein Verwalter \textbf{SOLL} auf der Startseite einen anklickbaren Reiter haben, welche eine Übersicht aller Termine öffnet.
+	& - \\
+	\hline
+	\printfreqnr
+	& Ein Verwalter \textbf{MUSS} in der Lage sein, eine Anwesenheitsliste nachträglich bearbeiten zu können
+	& - \\
+	\hline
+	\printfreqnr
+	& Ein Verwalter \textbf{MUSS} in der Lage sein, die hinterlegten Kommentare einer Anwesenheitsliste einsehen zu können.
+	& - \\
+	\hline
+\end{tabular}
+
+\newpage
+
 \subsection{Fehlzeiten einsehen}
 
 \subsubsection{Unangemeldete Benutzer}
