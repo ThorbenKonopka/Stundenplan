@@ -367,6 +367,7 @@ Der Verwalter hat deutlich mehr recht was die Verwaltung von Terminen angeht, we
 \newpage
 
 \subsection{Termine verschieben}
+Falls ein Termin nachträglich verschoben werden muss, muss ein Prozess vorhanden sein, der diese Änderung in den Datenbestand einpflegt und dabei Rechte und die Plausibilität beachtet.
 
 \subsubsection{Unangemeldeter Benutzer und Student}
 Ein angemeldeter Student oder ein unangemeldeter Benutzer darf unter keinen Umständen Termine verschieben.
@@ -390,7 +391,6 @@ Ein angemeldeter Student oder ein unangemeldeter Benutzer darf unter keinen Umst
 \vspace{12pt}
 
 \subsubsection{Angemeldeter Dozent}
-
 Ein Dozent darf Termine in ihrer Uhrzeit selbst verschieben, soll aber für Änderungen am Datum eines Termins immer die Verwaltung anfragen müssen.
 
 \vspace{12pt}
@@ -411,12 +411,19 @@ Ein Dozent darf Termine in ihrer Uhrzeit selbst verschieben, soll aber für Änd
 	& Ein Dozent \textbf{MUSS} eine Anfrage zum Ändern des Datums eines Termins an die Verwaltung stellen können.
 	& - \\
 	\hline
+	\printfreqnr
+	& Ein Dozent \textbf{SOLL} beim Formulieren einer Verschieben-Anfrage für einen Termin, für den noch eine Anfrage aussteht, einen entsprechenden Hinweis darauf erhalten.
+	& - \\
+	\hline
+	\printfreqnr
+	& Ein Dozent \textbf{SOLL} eine Vorschau von ausstehenden Anfragen in seiner Terminansicht haben. Dabei sollte der ursprüngliche Termin als vorläufig nicht mehr aktuell gekennzeichnet werden.
+	& - \\
+	\hline
 \end{tabular}
 
-\vspace{12pt}
+\newpage
 
 \subsubsection{Angemeldeter Verwalter}
-
 Ein Verwalter darf Termine selbst beliebig verschieben und muss die von Dozenten gestellten Anfragen bearbeiten können. Ebenfalls muss der Verwalter die von Dozenten selbst durchgeführten Verschiebungen kontrollieren können.
 
 \vspace{12pt}
@@ -430,7 +437,11 @@ Ein Verwalter darf Termine selbst beliebig verschieben und muss die von Dozenten
 	& - \\
 	\hline
 	\printfreqnr
-	& Ein Verwalter \textbf{MUSS} die gestellten Datumsänderungsanfragen von Dozenten einsehen können.
+	& Während des Verschiebens-Prozesses \textbf{SOLL} klar erkennbar sein, wenn es dabei zu Überschneidungen mit anderen Terminen kommt.
+	& - \\
+	\hline
+	\printfreqnr
+	& Ein Verwalter \textbf{MUSS} die gestellten, noch nicht angenommenen, Datumsänderungsanfragen von Dozenten einsehen können.
 	& - \\
 	\hline
 	\printfreqnr
@@ -438,7 +449,11 @@ Ein Verwalter darf Termine selbst beliebig verschieben und muss die von Dozenten
 	& - \\
 	\hline
 	\printfreqnr
-	& Ein Verwalter \textbf{MUSS} die durchgeführten Uhrzeitänderungen von Dozenten einsehen können und diese rückgängig machen, falls diese zu Konflikten führen.
+	& Ein Verwalter \textbf{SOLL} einfach in der Übersicht erkennen können, ob die Uhrzeit eines Termins eigenmächtig von einem Dozenten verschoben wurde.
+	& - \\
+	\hline
+	\printfreqnr
+	& Ein Verwalter \textbf{MUSS} Details zu den durchgeführten Uhrzeitänderungen von Dozenten einsehen können und diese rückgängig machen, falls diese zu Konflikten führen.
 	& - \\
 	\hline
 \end{tabular}
