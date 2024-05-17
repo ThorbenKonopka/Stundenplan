@@ -469,9 +469,12 @@ Angemeldete Studenten und unangemeldete Benutzer dürfen unter keinen Umständen
 \newpage
 
 \subsection{Fehlzeiten einsehen}
+Eine Fehlzeit ist ein Termin, bei dem der Student hätte da sein müssen. Die Fehlzeiten werden hauptsächlich von dem System selbst erzeugt. Dafür werden neue Anwesenheitslisten von Terminen Ausgewertet. Diese Auswertung findet jede Nacht statt. Ausgewertet werden nur neue oder bearbeitete Anwesenheitslisten. Bei neuen Anwesenheitslisten werden auch neue Fehlzeiten erzeugt. Bei Aktualisierungen wird lediglich die Konsistenz überprüft. Bei erzeugten Fehlzeiten gibt es einen Status. Es gibt \texttt{Unentschuldigt} oder \texttt{Entschuldigt}. Alle neu hinzugefügten Fehlzeiten sind zuerst Unentschuldigt. Wenn eine Fehlzeit existiert war der Student nicht anwesend. Über die Anwesenheitsliste kann der Status \textbf{NICHT} aktiv gesetzt werden. Sollte eine Anwesenheitsliste bearbeitet worden sein, so wird diese nachts erneut ausgewertet. Dabei werden lediglich die ausgewerteten Fehlzeiten mit den existierenden überprüft. Sollten hierbei Inkonsistenzen auffallen, so werden alle Verwalter über die Inkonsistenz benachrichtigt. Zudem findet die Prüfung auf Inkonsistenzen jeden Montag Morgen statt. Hierbei werden aber alle Anwesenheitslisten auf Inkonsistenzen geprüft. Diese vollständige Prüfung findet Montag statt, weil die Fehlzeiten spätestens Samstag Abend erzeugt werden. Zudem wird davon ausgegangen, dass das System am Montag Morgen wenig Ausgelastet ist. Bei der Prüfung wird geprüft, dass jede Fehlzeit aus allen Anwesenheitslisten erzeugt wurden und dass jede erzeugte Fehlzeit einer Anwesenheitsliste zugeordnet werden kann. Falls hierbei Inkonsistenzen gefunden werden, werden alle Verwalter benachrichtigt. 
+
+\vspace{12pt}
 
 \subsubsection{Unangemeldete Benutzer}
-Ein unangemeldeter Benutzer darf unter keinen Umständen die Fehlzeiten von anderen Benutzern einsehen.
+Ein unangemeldeter Benutzer darf unter keinen Umständen die Fehlzeiten von Benutzern einsehen.
 
 \vspace{12pt}
 
@@ -484,14 +487,19 @@ Ein unangemeldeter Benutzer darf unter keinen Umständen die Fehlzeiten von ande
 	& - \\
 	\hline
 	\printfreqnr
-	& Wenn ein unangemeldeter Benutzer versucht einen Fehlzeiten einzusehen, \textbf{MUSS} das System weiteres Vorgehen unterbinden und dem Benutzer mitteilen, dass er nicht autorisiert ist.
+	& Wenn ein unangemeldeter Benutzer versucht Fehlzeiten einzusehen, \textbf{MUSS} das System weiteres Vorgehen unterbinden und dem Benutzer mitteilen, dass er nicht autorisiert ist.
 	& - \\ 
 	\hline
 \end{tabular}
 
-\vspace{12pt}
+%\vspace{12pt}
+\newpage
 
 \subsubsection{Angemeldeter Student}
+Wegen Datenschutz ist es wichtig, dass ein Student nur seine eigenen Fehlzeiten einsehen kann. Zugriff auf die Fehlzeiten anderer Studenten muss dementsprechend vom System unterbunden werden. 
+
+\vspace{12pt}
+
 \begin{tabular} {|p{1,4cm}|p{10,7cm}|p{2,7cm}|}
 	\hline
 	ID & Anforderung & Kriterien \\
@@ -501,7 +509,19 @@ Ein unangemeldeter Benutzer darf unter keinen Umständen die Fehlzeiten von ande
 	& - \\
 	\hline
 	\printfreqnr
-	& Die angezeigten Fehlzeiten \textbf{MÜSSEN} notwendige Informationen über den Termin enthalten.
+	& Wenn ein Student seine Fehlzeiten einsieht, \textbf{MUSS} das System die unentschuldigten Fehlzeiten mit der Farbe Rot markieren, damit auf dem ersten Blick erkennbar ist, welche Fehlzeiten noch entschuldigt werden müssen. 
+	& - \\
+	\hline
+	\printfreqnr
+	& Wenn ein Student seine Fehlzeiten einsieht, \textbf{SOLL} das System die entschuldigten Fehlzeiten mit der Farbe Grün markieren, damit ein Kontrast zu den unentschuldigten Terminen zusehen ist. 
+	& - \\
+	\hline
+	\printfreqnr
+	& Die angezeigten Fehlzeiten \textbf{MÜSSEN} notwendige Informationen über den Termin enthalten. (Siehe anzuzeigende Daten von den Terminen)
+	& - \\ 
+	\hline
+	\printfreqnr
+	& Wenn ein Student seine Termine einsieht, \textbf{SOLL} das System anzeigen, wenn Fehlzeiten für Termine vorliegen.
 	& - \\ 
 	\hline
 \end{tabular}
@@ -509,6 +529,10 @@ Ein unangemeldeter Benutzer darf unter keinen Umständen die Fehlzeiten von ande
 \vspace{12pt}
 
 \subsubsection{Angemeldeter Dozent}
+Die Fehlzeiten beziehen Sich auf einzelne Studenten. Die Anwesenheitsliste wird als etwas völlig anderes gesehen. Es macht keinen Sinn, dass ein Dozent die Fehlzeiten von einzelnen Studenten einsehen kann. Der Zugriff muss also vom System unterbunden werden.
+
+\vspace{12pt}
+
 \begin{tabular} {|p{1,4cm}|p{10,7cm}|p{2,7cm}|}
 	\hline
 	ID & Anforderung & Kriterien \\
@@ -519,9 +543,14 @@ Ein unangemeldeter Benutzer darf unter keinen Umständen die Fehlzeiten von ande
 	\hline
 \end{tabular}
 
-\vspace{12pt}
+%\vspace{12pt}
+\newpage
 
 \subsubsection{Angemeldeter Verwalter}
+Ein Verwalter ist die höchste Instanz in unserem System und muss deshalb die Möglichkeit haben, Termine zu erzeugen, zu löschen und zu bearbeiten. Hierbei können besagte Inkonsistenzen auftreten.
+
+\vspace{12pt}
+
 \begin{tabular} {|p{1,4cm}|p{10,7cm}|p{2,7cm}|}
 	\hline
 	ID & Anforderung & Kriterien \\
@@ -536,6 +565,96 @@ Ein unangemeldeter Benutzer darf unter keinen Umständen die Fehlzeiten von ande
 	\hline
 	\printfreqnr
 	& Wenn ein Verwalter anfängt die Matrikelnummer oder den Namen des Studenten einzugeben, \textbf{MUSS} das System passende Studenten vorschlagen.
+	& - \\ 
+	\hline
+	\printfreqnr
+	& Wenn ein Verwalter einen Studenten ausgewählt hat, \textbf{MUSS} das System alle Fehlzeiten des ausgewählten Studenten anzeigen.
+	& - \\ 
+	\hline
+	\printfreqnr
+	& Ein Verwalter, \textbf{MUSS} Studenten entschuldigen können.
+	& - \\ 
+	\hline
+	\printfreqnr
+	& Wenn ein Verwalter einen Studenten entschuldigt, \textbf{MUSS} das System die Fehlzeit als entschuldigt markieren.
+	& - \\ 
+	\hline
+	\printfreqnr
+	& Wenn eine Fehlzeit als entschuldigt markiert wird, \textbf{MUSS} das System den Studenten darüber benachrichtigen.
+	& - \\ 
+	\hline
+	\printfreqnr
+	& Wenn ein Verwalter Fehlzeit einsieht, \textbf{MUSS} das System die Fehlzeiten in einer Tabelle auflisten. Dabei existiert für jede Fehlzeit eine Zeile.
+	& - \\ 
+	\hline
+	\printfreqnr
+	& Wenn ein Verwalter Fehlzeiten einsieht, \textbf{MUSS} das System alle Termin relevanten Daten (Siehe Termine Anzeigen), den vollständigen Namen des Studenten, die Matrikelnummer des Studenten, den vollständigen Namen des Dozenten und den Status der Fehlzeit anzeigen.
+	& - \\ 
+	\hline
+	\printfreqnr
+	& Ein Verwalter \textbf{MUSS} eine neue Fehlzeit anlegen können. 
+	& - \\ 
+	\hline
+	\printfreqnr
+	& Wenn ein Verwalter eine neue Fehlzeit anlegt, \textbf{MUSS} der Verwalter einen Termin und einen Studenten auswählen können. 
+	& - \\ 
+	\hline
+	\printfreqnr
+	& Ein Verwalter \textbf{MUSS} eine Fehlzeit aus der Übersicht auswählen und löschen können. 
+	& - \\ 
+	\hline
+	\printfreqnr
+	& Wenn ein Verwalter eine Fehlzeit löscht oder hinzufügt, \textbf{MUSS} das System den Verwalter darauf hinweisen, dass ggf. noch die Anwesenheitsliste angepasst werden muss. Dieser Hinweis wird grundsätzlich immer angezeigt. Das System überprüft \textbf{NICHT} ob die Anwesenheitsliste im Vorhinein bearbeitet wurde.
+	& - \\ 
+	\hline
+\end{tabular}
+
+%\vspace{12pt}
+\newpage
+
+\subsubsection{Überschneidung mit Anwesenheitsliste}
+Die Anwesenheitslisten sollten mit den Erzeugten Fehlzeiten übereinstimmen. Sowohl nachts um 23 Uhr als auch Montag Morgens um 3 Uhr ist die Serverlast gering. Deshalb sollte die Auswertung der Anwesenheitslisten und die Konsistenzprüfung zu solchen Zeiten stattfinden. Es ist wichtig, dass die Auswertung (Die Erzeugung der Termine) Täglich passiert, damit die Studenten rechtzeitig über die Fehlzeit benachrichtigt werden.
+
+\vspace{12pt}
+
+\begin{tabular} {|p{1,4cm}|p{10,7cm}|p{2,7cm}|}
+	\hline
+	ID & Anforderung & Kriterien \\
+	\hline
+	\printfreqnr
+	& Das System \textbf{MUSS} jede Nacht um 23:00 Uhr alle neuen und bearbeiteten Anwesenheitslisten auswerten. 
+	& - \\
+	\hline
+	\printfreqnr
+	& Wenn es neue Anwesenheitslisten gibt, \textbf{MUSS} das System die nicht anwesenden Studenten identifizieren und Fehlzeiten anlegen. 
+	& - \\ 
+	\hline
+	\printfreqnr
+	& Wenn eine neue Fehlzeit angelegt wird, \textbf{MUSS} das System den Studenten über die Fehlzeit benachrichtigen. 
+	& - \\ 
+	\hline
+	\printfreqnr
+	& Wenn Anwesenheitslisten bearbeitet wurden, \textbf{MUSS} das System prüfen, ob alle ausgewerteten Fehlzeiten existieren. 
+	& - \\ 
+	\hline
+	\printfreqnr
+	& Das System \textbf{MUSS} jeden Montag um 3:00 Uhr die Konsistenz zwischen den Anwesenheitslisten und den Fehlzeiten vollständig prüfen.
+	& - \\ 
+	\hline
+	\printfreqnr
+	& Das System \textbf{MUSS} überprüfen, ob jede Fehlzeit in einer Anwesenheitsliste zu finden ist.
+	& - \\ 
+	\hline
+	\printfreqnr
+	& Das System \textbf{MUSS} überprüfen, ob jede Fehlzeit aus einer Anwesenheitsliste existiert.
+	& - \\ 
+	\hline
+	\printfreqnr
+	& Wenn das System Inkonsistenzen gefunden hat, \textbf{MUSS} das System alle Verwalter benachrichtigen.
+	& - \\ 
+	\hline
+	\printfreqnr
+	& Der Benachrichtigung, \textbf{MUSS} die Anwesenheitsliste, der Student und der Termin entnehmbar sein.
 	& - \\ 
 	\hline
 \end{tabular}
