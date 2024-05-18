@@ -676,82 +676,54 @@ Sie müssen in der Lage sein, Benutzerkonten anzulegen, zu bearbeiten und wieder
 %\vspace{18pt}
 
 \subsection{Veranstaltungen verwalten}
+Eine Veranstaltung ist in unserem Modell ein Muster für die Konkretisierung eines Moduls, welches seinerseits dann durch die Termine ausgekleidet wird. Das Verwalten von Veranstaltungen 
+bedeutet das Anlegen, Ansehen, Bearbeiten oder Löschen von Veranstaltungsdatensätzen.\\
+Da die Veranstaltungen gerade als Muster fungieren sollen,  werden nicht die Veranstaltungssätze, sondern die darauf fußenden Termindatensätze genutzt, um den Kalender u.Ä. darzustellen. Insofern beschränkt sich der Zugriff auf die Veranstaltungen auf die Verwalter.
+
+
+\subsubsection{Angemeldete Verwalter }
+Die Änderungen an den Veranstaltungen laufen gebündelt über die Verwaltung.
 \begin{tabular} {|p{1,4cm}|p{10,7cm}|p{2,7cm}|}
 	\hline
 	ID & Anforderung & Kriterien \\
 	\hline
 	\printfreqnr
-	& Das System \textbf{SOLL} dem Verwalter ermöglichen, neue Veranstaltungen mit Details hinzuzufügen. 
+	& Ein angemeldeter Verwalter MUSS Veranstaltungen erstellen, löschen, bearbeiten und auslesen können.
 	& - \\
 	\hline
 	\printfreqnr
-	& Das System \textbf{MUSS} die Erstellung neuer Veranstaltungen innerhalb von maximal 10 Sekunden ermöglichen, um eine effiziente Verwaltung zu gewährleisten. 
+	& Dem angemeldeten Verwalter SOLL das Erstellen einer Veranstaltung für ein Semester aus der Modulliste ermöglicht werden.
 	& - \\
 	\hline
 	\printfreqnr
-	& Das System \textbf{MUSS} sicherstellen, dass Veranstaltungsdaten über sichere Protokolle (wie HTTPS) übertragen werden, um die Integrität und Vertraulichkeit der Informationen zu schützen. 
+	& Der angemeldete Verwalter SOLL die erstellten Veranstaltung und ihre Termine in einer Liste sehen können. 
 	& - \\
 	\hline
 	\printfreqnr
-	& Das System \textbf{SOLL} in der Lage sein, eine unbegrenzte Anzahl von Veranstaltungen zu unterstützen, ohne an Leistung zu verlieren. 
+	& Der angemeldete Verwalter SOLL eine Veranstaltung über die Kalendersicht mit Terminen befüllen können.
 	& - \\
 	\hline
 	\printfreqnr
-	& Das System \textbf{MUSS} das Bearbeiten von Veranstaltungsdetails durch den Verwalter ermöglichen. 
-	& - \\
-	\hline
-	\printfreqnr
-	& Das System \textbf{MUSS} Änderungen an Veranstaltungsdetails sofort in allen abhängigen Systemen und Ansichten aktualisieren, um Konsistenz zu gewährleisten. 
-	& - \\
-	\hline
-	\printfreqnr
-	& Das System \textbf{MUSS} Benutzerschnittstellen bereitstellen, die intuitiv und ohne zusätzliche Schulung zu bedienen sind. 
+	& Der angemeldete Verwalter SOLL beim Erstellen einer neuen Veranstaltung den zugehörigen Dozenten aus einem Dropdown-Menü auswählen können.
 	& - \\
 	\hline
 \end{tabular}
 
 \newpage
 
+\subsubsection{Weitere Akteure}
+Da die Veranstaltungen lediglich als Muster dienen, haben die anderen Akteure keinen Zugriff auf diese. Studenten können ihre Termine auch ohne Zugriff auf die Veranstaltungen einsehen während Dozenten Änderungswünsche einfach der Verwaltung mitteilen können. Dies hat den Hintergrund, dass die Bearbeitung von Vorlagen gebündelt stattfinden sollte.
 \begin{tabular} {|p{1,4cm}|p{10,7cm}|p{2,7cm}|}
 	\hline
 	ID & Anforderung & Kriterien \\
 	\hline
 	\printfreqnr
-	& Das System \textbf{SOLL} dem Verwalter ermöglichen, Veranstaltungen aus dem System zu entfernen. 
-	& - \\
-	\hline
-	\printfreqnr
-	& Das System \textbf{MUSS} eine Warnmeldung anzeigen und eine Bestätigung verlangen, bevor eine Veranstaltung endgültig gelöscht wird, um unbeabsichtigte Löschungen zu verhindern. 
-	& - \\
-	\hline
-	\printfreqnr
-	& Das System \textbf{SOLL} gelöschte Veranstaltungen in einem Archiv für einen definierten Zeitraum speichern, um eine mögliche Wiederherstellung zu ermöglichen. 
-	& - \\
-	\hline
-	\printfreqnr
-	& Das System \textbf{MUSS} sicherstellen, dass die Löschung von Veranstaltungen keine Auswirkungen auf die Gesamtstabilität des Systems hat. 
-	& - \\
-	\hline
-	\printfreqnr
-	& Das System \textbf{SOLL} eine Übersicht aller geplanten Veranstaltungen bieten, die jeder Akteur einsehen kann. 
-	& - \\
-	\hline
-	\printfreqnr
-	& Das System \textbf{MUSS} die Übersicht aller Veranstaltungen in Echtzeit darstellen, um aktuelle Informationen bereitzustellen. 
-	& - \\
-	\hline
-	\printfreqnr
-	& Das System \textbf{SOLL} anpassbare Filter für die Veranstaltungsansicht bereitstellen, um eine individuelle Ansicht zu ermöglichen. 
-	& - \\
-	\hline
-	\printfreqnr
-	& Das System \textbf{MUSS} die Übersichtsseite so gestalten, dass sie auch bei einer großen Anzahl von Einträgen performant bleibt. 
+	& Das System \textbf{MUSS} dem Gast, dem Studenten und dem Dozenten den Zugriff auf die Veranstaltungsdatensätze verwehren.
 	& - \\
 	\hline
 \end{tabular}
 
 \newpage
-
 \subsection{Module verwalten}
 \begin{tabular} {|p{1,4cm}|p{10,7cm}|p{2,7cm}|}
 	\hline
