@@ -1,0 +1,106 @@
+% !TeX root = Architekturdokument.tex
+
+\clearpage
+
+\section{Architekturstile}
+Um die nicht funktionalen Anforderungen zu erfüllen ist es notwendig zuerst die Architekturstile zu wählen. Durch die Wahl der Architekturstile werden die emergenten Eigenschaften des Systems bestimmt. Emergente Eigenschaften sind globale Eigenschaften, die nicht an einer lokalen Stelle erstellt werden können. Sie beschreiben Eigenschaften, wie z. B. die Skalierbarkeit. Dadurch können diese Eigenschaften nicht funktionale Anforderungen erfüllen. Um die Wahl der Architekturstile etwas einfacher zu gestalten werden nur in dem Modul besprochene Architekturstile betrachtet. Die folgenden Informationen entspringen den Lehrinhalten des Moduls \textbf{Software-Architektur und -Design}.
+
+\vspace{18pt}
+
+\subsection{MVC}
+MVC entkoppelt die Daten von der Darstellung der Daten. Dadurch können Daten geändert werden, ohne dabei die Ansicht anpassen zu müssen. Zudem kann die Ansicht angepasst werden, ohne dabei die Daten anpassen zu müssen. MVC wird sehr häufig benutzt, weil es viele Vorteile und wenig Nachteile bringt.
+
+\vspace{6pt}
+
+Wie die Daten dargestellt werden wird erfahrungsgemäß sehr häufig von den verwendeten Technologien vorgegeben bzw. empfohlen. Wir haben uns dazu entschieden JSF zu benutzen. JSF benutzt eine Art von MVC. Wir halten es für Sinnvoll die von JSF empfohlene Art und Weise zu benutzen, weil die Entwickler es auf jeden Fall besser wissen als wir und viel Erfahrung darin haben.
+
+\vspace{18pt}
+
+\subsection{Microservice-Architektur}
+Die Microservice-Architektur wird in sehr Großen Projekten benutzt, weil die Skalierbarkeit sehr gut ist und das System aus mehreren Servern besteht, die parallel von verschiedenen Teams mit möglichst wenig Kommunikation entwickelt werden können. Zudem ist es möglich das System zur Laufzeit durch das hinzufügen von neuen Servern neu zu deployen, was ebenfalls in sehr großen Projekten relevant ist. Diese Eigenschaften haben aber einen recht hohen Preis. Es wird leistungsstarke Hardware benötigt und es werden allgemein deutlich mehr Ressourcen benötigt. Die Server kommunizieren sehr viel untereinander, was ein starke und stabile Internetverbindung voraussetzt. Zudem ist der Verwaltungsaufwand durch die vielen Server stark erhöht. Die laufende Entwicklung wird auch erschwert, weil sich das System schwerer Realitätsnah lokal aufsetzen lässt. 
+
+\vspace{6pt}
+
+Dieser Architekturstil wird von uns nicht verwendet, weil er für unser Projekt keine Vorteile aber dafür viele Nachteile bringen würde. Wie bereits erwähnt bräuchten wir mehr und leistungsstärkere Hardware für die Inbetriebnahme. Zudem lässt sich die Umgebung selbst mit Docker nur sehr schwierig, wenn überhaupt, lokal aufsetzen. Dadurch wird der lokale Nachtest erschwert, was nicht nur zu einem Zeitverlust führt, sondern auch zu mehr Bugs, die live sind. 
+
+\vspace{18pt}
+
+\subsection{Web-Architektur}
+Die Web-Architektur ist eine Standardarchitektur und kann als eine Art Konkretisierung des Client-/Server-Architektur Architekturstils gesehen werden. Sie wird benutzt, wenn die folgenden nicht funktionalen Anforderungen relevant sind.
+
+\begin{itemize}
+	\item Gemeinsame Datenhaltung
+	\item Hohe Verfügbarkeit
+	\item Interaktion mit Mensch und Maschine
+	\item Internationalisierung 
+	\item Sicherheit
+	\item Skalierbarkeit
+	\item Semi-dezentrale Entwicklung
+\end{itemize}
+
+Obwohl nicht jede genannte nicht funktionale Anforderung für uns relevant ist, gibt es keine Anforderung, die mit den nicht benötigten Anforderungen kollidieren würde. Von den genannten Eigenschaften sind die folgenden für unser System relevant.
+
+\begin{itemize}
+	\item Gemeinsame Datenhaltung
+	\item Hohe Verfügbarkeit
+	\item Interaktion mit Mensch und Maschine
+	\item Sicherheit
+\end{itemize}
+
+Es gibt auch Eigenschaften, die in Zukunft relevant werden könnten.
+
+\begin{itemize}
+	\item Internationalisierung
+	\item Skalierbarkeit
+\end{itemize}
+
+Die \textbf{Semi-dezentrale Entwicklung} ist für dieses Projekt mit hoher Wahrscheinlichkeit auch in Zukunft nicht relevant, weil das System voraussichtlich nicht die Größe erreichen wird, damit eine parallele, dezentrale Entwicklung in einem solchen Ausmaß nötig wird. Das bedeutet aber nicht, dass in diesem Projekt nicht parallel werden kann. Bei einem Projekt diese Größe reicht erfahrungsgemäß eine gute Organisation des Teams zusammen mit Git aus, damit parallel entwickelt werden kann.
+
+\vspace{18pt}
+
+\subsection{Client-/Server-Architektur}
+Der Client-/Server-Architekturstil wird benutzt, wenn man eine zentrale Datenhaltung braucht und eine hohe Verfügbarkeit erwünscht ist. 
+
+\vspace{6pt}
+
+Dieser Architekturstil wird benutzt, weil wir die Web-Standartarchitektur benutzen.
+
+\vspace{18pt}
+
+\subsection{Mehrschicht-Architektur}
+die Mehrschicht-Architektur wird benutzt, wenn die Grobstruktur des Systems Schnell und einfach sein soll. Die Schichten-Architektur ist in der Regel die erste Idee, auf die Entwickler kommen, weil sich Experten den jeweiligen Schichten zuordnen lassen. Zudem ist diese Architekturstil in der Regel nicht sonderlich komplex, was ebenfalls Zeit spart und die Übersichtlichkeit erhöht. 
+
+\vspace{6pt}
+
+Dadurch, dass die Zeit für dieses Projekt recht begrenzt ist und recht viele Teammitglieder wenig mit Softwaredesign und Entwicklung zu tun haben, ist dieser Architekturstil sehr passend. Dadurch wird voraussichtlich Zeit gespart und die Entwicklung für weniger erfahrene Entwickler vereinfacht. Es sind die drei Schichten \textbf{Contact entrance}, \textbf{Businesslogic} und \textbf{Datasource} vorgesehen. 
+
+\vspace{12pt}
+
+\subsubsection{Contact entrance}
+In dieser Schicht befinden sich Module, die entweder für die Kommunikation mit Menschen oder Maschinen benutzt werden. Hier sind also für die Maschinen Module zu erwarten, die Rest-Schnittstellen bereitstellen. Für Menschen werden hier Module existieren, die mit JSF mit Menschen kommunizieren. 
+
+\vspace{12pt}
+
+\subsubsection{Businesslogic}
+In dieser Schicht befinden Sich Module, die die Geschäftslogik enthalten. 
+
+\vspace{12pt}
+
+\subsubsection{Datasource}
+In dieser Schicht liegen Module, die in irgendeiner Art und Weise Daten aus Externen Quellen beziehen. Zu erwarten Sind hier Module, die auf die MySQL und die MongoDB zugreifen. Zudem wird hier ein Modul erwartet, das mit dem Externen KI-Server kommuniziert. 
+
+\vspace{18pt}
+
+\subsection{Pipeline-Architektur}
+Mithilfe einer Pipeline-Architektur kann man Daten effektiv prüfen oder mutieren.  
+Die Pipeline Architektur hat eine recht niedrige Komplexität und ist ziemlich verlässlich.  
+Jedoch wird es im Umfang des Projekts keine großen Datentransformationen geben, welche diese Architektur rechtfertigen würde.
+
+\vspace{18pt}
+
+\subsection{Ereignisgesteuertes System}
+Der ereignisbasierte Architekturstil sollte dann gewählt werden, wenn Performance, Skalierbarkeit, Fehlertoleranz und Erweiterbarkeit wichtig sind. Die Entkopplung, die zwischen den Komponenten entsteht ist in vielen fällen gut, steigert aber die Komplexität und verringert die Wartbarkeit. 
+
+\vspace{6pt}
+
+Wie bereits erwähnt, spielt Zeit und die Erfahrung der Entwickler eine große Rolle. Der Vorteil, den die Entkopplung bringt, ist aber so groß, dass wir vorhaben diesen Architekturstil einzusetzen. Dabei sollen aber nur wenige und gut durchdachte Stellen betroffen sein. Durch die Events können Komponenten, die sich mit einer höheren Wahrscheinlichkeit ändern so abgekapselt werden, dass weniger Komponenten drum herum angepasst werden müssen. Die hohe Skalierbarkeit, könnte bei bestimmten Komponenten in Zukunft relevant werden. Wir werden also diesen Architekturstil benutzen um besonders änderungsanfällige Komponenten weiter zu entkoppeln und stark benutze Komponenten in Zukunft Skalierbar machen zu können. 
