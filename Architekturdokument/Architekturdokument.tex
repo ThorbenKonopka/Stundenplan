@@ -1,0 +1,147 @@
+\documentclass[11pt,a4paper]{article}
+
+
+\setlength{\parindent}{0pt}
+
+\makeatletter
+\renewcommand\section{\@startsection
+	{section}{1}{0mm}%			% name, ebene, einzug
+	{0pt}%				% vor-abstand
+	{24pt}%				% nach-abstand
+	{\bfseries\Large}%		% layout
+}
+\makeatother
+\makeatletter
+\renewcommand\subsection{\@startsection
+	{subsection}{2}{0mm}%			% name, ebene, einzug
+	{0pt}%				% vor-abstand
+	{12pt}%				% nach-abstand
+	{\bfseries\large}%		% layout
+}
+\makeatother
+\makeatletter
+\renewcommand\subsubsection{\@startsection
+	{subsubsection}{3}{0mm}%			% name, ebene, einzug
+	{0pt}%				% vor-abstand
+	{6pt}%				% nach-abstand
+	{\bfseries}%		% layout
+}
+\makeatother
+\makeatletter
+\renewcommand\paragraph{\@startsection
+	{paragraph}{4}{0mm}%			% name, ebene, einzug
+	{0pt}%				% vor-abstand
+	{6pt}%				% nach-abstand
+	{\bfseries}%		% layout
+}
+\makeatother
+
+\usepackage[german]{babel}
+
+\usepackage{scrextend}
+
+\usepackage{listings}
+\lstset{
+	frame=trbl,
+	language=Java,
+	breaklines=true}
+
+\usepackage{icomma}
+
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+
+\usepackage{scrlayer-scrpage}
+\clearpairofpagestyles
+\ofoot{\pagemark}
+\ihead{\includegraphics[height=1cm]{itcLogo}}
+
+\usepackage{tikz}
+\usetikzlibrary{er,positioning}
+
+\usepackage{svg}
+\svgpath{ {./images/} }
+
+\usepackage[left=3.0cm, right=2.5cm, top=3.0cm, bottom=2.5cm, footskip=1.3cm]{geometry}
+
+\usepackage{fontspec}
+\setmainfont{Arial}
+%\setmainfont{Liberation Sans}
+
+\sloppy
+
+\usepackage{setspace}
+\setstretch{1.3}
+
+\usepackage{hyperref}
+\hypersetup{
+	pdfborder={0 0 0},
+	bookmarks=false,
+	colorlinks=true,
+	linkcolor=[RGB]{0,110,199},
+	urlcolor=[RGB]{0,110,199}
+}
+
+\title{Anforderungsdokument}
+\date{2024-04-15}
+\author{-}
+\begin{document}
+	\begin{titlepage}
+		\begin{center}
+			\Huge
+			\textbf{Architekturdokument\\ Stundenplan Verwaltung}
+			
+			\vspace{0.5cm}
+			\LARGE
+			Dokumentation der Gruppenaufgaben
+			
+			\vspace{1.5cm}
+			
+			\textbf{ChronoCrew}
+			
+			\vspace{1.75cm}
+			
+			\vfill
+			
+			\vspace{1.0cm}
+			\large
+			\begin{tabular}{p{8cm}l}
+				\textbf{Gruppenleiter:} & Lukas Meier\\
+				& 2022013\\
+				& lukas.meier@itc-studenten.de\\ 
+				&\\
+				\textbf{Gruppenmitglieder:} & Fiona Petermann\\
+				& 2022017\\
+				& fiona.petermann@itc-studenten.de\\
+				&\\
+				& Masi Tiblas\\
+				& 2022024\\
+				& m.tiblas@itc-studenten.de\\
+				&\\
+				& Joshua Hepke\\
+				& 2022009\\
+				& joshua.hepke@itc-studenten.de\\
+				&\\
+				& Nils Thorben Konopka\\
+				& 2022012\\
+				& nils-thorben.konopka@itc-studenten.de
+			\end{tabular}
+			\vfill
+		\end{center}
+	\end{titlepage}
+	
+	\newpage
+	
+	\setcounter{tocdepth}{2}
+	\setcounter{secnumdepth}{3}
+	\tableofcontents
+	
+	\newpage
+	
+	\include{Technologien.tex}
+	
+	\include{Architekturstile.tex}
+	
+	\include{Modularisierung.tex}
+	
+\end{document}
