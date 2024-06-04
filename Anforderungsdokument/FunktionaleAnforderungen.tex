@@ -54,6 +54,31 @@ Wir finden, dass eine einfache Anmeldung mit Benutzername und Passwort völlig a
 
 \newpage
 
+\subsubsection{Mögliche Änderungen}
+Hier sind die möglichen Änderungen für die Anforderungen in diesem Unterkapitel.
+
+\vspace{6pt}
+
+\begin{tabular} {|p{4cm}|p{2,1cm}|p{8,7cm}|}
+	\hline
+	Anforderungen & Stabilität & Begründung \\
+	\hline
+	FA-101
+	& 90\%
+	& Dies ist eine Standardanforderung, lediglich zusätzliche Sicherungsmöglichkeiten, wie z.B. 2FA, sind denkbar. \\
+	\hline
+	FA-102
+	& 100\%
+	& Grundkriterium für das Funktionieren der Nutzerauthentifizierung \\
+	\hline
+	FA-103, FA-104
+	& 100\%
+	& Wichtige Sicherheitsfunktion, die wahrscheinlich stabil bleibt. \\
+	\hline
+\end{tabular}
+
+\newpage
+
 \subsection{Termine einsehen}
 Dieses System ist in erster Linie dazu da um Termine zu verwalten. Bei der Betrachtung dieser Funktionalität spielen die verschiedenen Benutzergruppen bzw. die verschiedenen Sichten auf diese Funktionalitäten eine große Rolle. 
 
@@ -193,12 +218,57 @@ Für einen angemeldeten Verwalter werden die gleichen Daten für jeden Termin an
 	& - \\
 	\hline
 	\printfreqnr
-	& Wenn ein angemeldeter Student alle Termine angezeigt bekommt \textbf{MUSS} das System , das Datum, die Start- und Endzeit, der Dozent, die Bezeichnung des Moduls, falls vorhanden die Raumnummer und falls vorhanden der Link zu einer Onlineplattform anzeigen.
-	& - \\
-	\hline
-	\printfreqnr
 	& Das System \textbf{DARF NICHT} den Link für Onlinevorlesungen für unangemeldete Benutzer anzeigen. 
 	& - \\
+	\hline
+\end{tabular}
+
+\newpage
+
+\subsubsection{Mögliche Änderungen}
+Hier sind die möglichen Änderungen für die Anforderungen in diesem Unterkapitel.
+
+\vspace{6pt}
+
+\begin{tabular} {|p{4cm}|p{2,1cm}|p{8,7cm}|}
+	\hline
+	Anforderungen & Stabilität & Begründung \\
+	\hline
+	FA-201
+	& 90\%
+	& Der Kalender soll auch Interessierten zur Verfügung stehen; es ist unwahrscheinlich, dass sich das ändert. \\
+	\hline
+	FA-202, FA-203, FA-204, FA-205, FA-206, FA-207, FA-208
+	& 100\%
+	& Sinnvolle Anforderung für bessere User Experience. \\
+	\hline
+	FA-209
+	& 100\%
+	& Grundfunktionalität, die stabil bleibt. \\
+	\hline
+	FA-210
+	& 90\%
+	& Grundanforderung, könnte aber auch später durch weitere Verwaltungsfunktionen erweitert werden. \\
+	\hline
+	FA-211, FA-212, FA-213, FA-214
+	& 85\%
+	& Praktisch stabil, könnte durch Änderungen in der Suchfunktionalität angepasst werden. \\
+	\hline
+	FA-215
+	& 100\%
+	& Klare logische Einschränkung, die stabil bleibt. \\
+	\hline
+	FA-216
+	& 75\%
+	& Klare logische Einschränkung, die stabil bleibt. \\
+	\hline
+	FA-217, FA-218
+	& 80\%
+	& Standardanforderung, könnte durch neue Anzeigekriterien angepasst werden. \\
+	\hline
+	FA-219
+	& 100\%
+	& Wichtige Sicherheitsanforderung, die stabil bleibt. \\
 	\hline
 \end{tabular}
 
@@ -289,7 +359,8 @@ Ein Dozent ist maßgeblich an der Terminfindung beteiligt. Bestimmte Richtlinien
 \end{tabular}
 
 
-\newpage
+%\newpage
+\vspace{12px}
 
 Um diesen Prozess für den Dozenten so angenehm wie möglich zu machen, soll es Tools geben, die Ihm das Leben einfacher machen sollen. Zuerst soll es eine KI geben, die Zeiträume für Termine vorschlägt. Dabei ist das Ziel, dass der Dozent Termine auswählen kann, zu denen die Studenten z.B.: am aktivsten sind. 
 %Das zweite Tool ist eine Art Wochenplaner, bei dem der Dozent eine für das Semester repräsentative Woche mit Terminen einträgt und das Tool generiert dann einen einreichbaren Vorschlag. Dadurch soll dem Dozenten Arbeit abgenommen werden.
@@ -361,6 +432,77 @@ Der Verwalter hat deutlich mehr recht was die Verwaltung von Terminen angeht, we
 	\printfreqnr
 	& Wenn ein Verwalter versucht einen Termin zu verändern \textbf{MUSS} das System sicher stellen, dass es keine Überlappungen mit anderen Terminen gibt.
 	& - \\
+	\hline
+\end{tabular}
+
+\newpage
+
+\subsubsection{Mögliche Änderungen}
+Hier sind die möglichen Änderungen für die Anforderungen in diesem Unterkapitel.
+
+\vspace{6pt}
+
+\begin{tabular} {|p{4cm}|p{2,1cm}|p{8,7cm}|}
+	\hline
+	Anforderungen & Stabilität & Begründung \\
+	\hline
+	FA-301, FA-302
+	& 100\%
+	& Klare Sicherheitsanforderung, die stabil bleibt. \\
+	\hline
+	FA-303
+	& 40\%
+	& Diese Anforderung könnte durch automatisierte Vorschläge und KI-basierte Unterstützung ergänzt werden. \\
+	\hline
+	FA-304, FA-305, FA-306
+	& 70\%
+	& Hinsichtlich der Kernfunktion stabil, User Experience könnte jedoch verbessert werden, z.B. durch eine intelligente Standardwertauswahl. \\
+	\hline
+	FA-307
+	& 30\%
+	& Hinsichtlich der Kernfunktion stabil, User Experience könnte jedoch verbessert werden, z.B. durch eine intelligente Standardwertauswahl. \\
+	\hline
+	FA-308, FA-309
+	& 100\%
+	& Sinnvolle Anforderung, die stabil bleibt. \\
+	\hline
+	FA-310
+	& 60\%
+	& Sinnvolle Anforderung, die stabil bleibt. Gegebenenfalls könnte hier bereits ein Ersatztermin vorgeschlagen und der Grund der kollidierende Termin angezeigt werden. Zudem könnte es sinnvoll sein, aus dieser Sicht auswählen zu können, welcher Termin gelten soll, der bestehende oder der neue. \\
+	\hline
+	FA-311
+	& 70\%
+	& Möglicherweise könnte hier auch bereits eine Nachricht an betroffene Studenten und die Verwaltung rausgehen. \\
+	\hline
+	FA-312
+	& 10\%
+	& Es kann sich auch herausstellen, dass eine Änderung der Termine durch den Dozenten insgesamt nicht erwünscht sind, und stattdessen nur Änderungsvorschläge gemacht werden, welche durchd ie Verwaltung genehmigt werden müssen. \\
+	\hline
+	FA-313
+	& 100\%
+	& Sinnvolle Kernanforderung, die stabil bleibt. \\
+	\hline
+	FA-314
+	& 30\%
+	& Eventuell wird die KI später auch eine intelligente Vorauswahl aller Werte vornehmen, und bloß noch Korrekturen abfragen. \\
+	\hline
+\end{tabular}
+
+\begin{tabular} {|p{4cm}|p{2,1cm}|p{8,7cm}|}
+	\hline
+	Anforderungen & Stabilität & Begründung \\
+	\hline
+	FA-315
+	& 85\%
+	& Praktisch stabil, könnte jedoch durch Änderungen in der Genehmigungslogik angepasst werden. \\
+	\hline
+	FA-316, FA-317, FA-318, FA-319, FA-320, FA-321, FA-324
+	& 85\%
+	& Praktisch stabil, könnte jedoch durch Änderungen in der Logik zur Vermeidung von Terminkollisionen angepasst werden. \\
+	\hline
+	FA-322, FA-323
+	& 100\%
+	& Praktisch stabile Anforderung. \\
 	\hline
 \end{tabular}
 
@@ -460,6 +602,35 @@ Ein Verwalter darf Termine selbst beliebig verschieben und muss die von Dozenten
 
 \newpage
 
+\subsubsection{Mögliche Änderungen}
+Hier sind die möglichen Änderungen für die Anforderungen in diesem Unterkapitel.
+
+\vspace{6pt}
+
+\begin{tabular} {|p{4cm}|p{2,1cm}|p{8,7cm}|}
+	\hline
+	Anforderungen & Stabilität & Begründung \\
+	\hline
+	FA-401, FA-402, FA-404, FA-405, FA-406, FA-408, FA-410, FA-411
+	& 100\%
+	& Diese Anforderung ist Ausdruck der grundlegenden Designentscheidung, Termine zentral über die Verwalter betreuen zu lassen. \\
+	\hline
+	FA-403, FA-412, FA-413
+	& 80\%
+	& Praktisch stabile Anforderung. \\
+	\hline
+	FA-407
+	& 50\%
+	& Eventuell wird der Änderungsantrag nur vermerkt, da ein "nicht mehr aktuell"-Vermerk zu Missverständnissen führen könnte. \\
+	\hline
+	FA-409
+	& 80\%
+	& Die Forderung bleibt in dieser Form bestehen, damit es nicht zu Konkurrenzen kommt. Eventuell muss noch deutlich gemacht werden, dass manche Termine ja durchaus gleichzeitig stattfinden können, z.B. alternative Wahlplfichtfächer. \\
+	\hline
+\end{tabular}
+
+\newpage
+
 \subsection{Anwesenheitsliste verwalten}
 
 \subsubsection{Studenten und unangemeldete Benutzer}
@@ -546,6 +717,44 @@ Wenn ein Student fälschlicherweise eingetragen/nicht eingetragen wurde, muss ei
 	\printfreqnr
 	& Ein Verwalter \textbf{MUSS} in der Lage sein, die hinterlegten Kommentare einer Anwesenheitsliste einsehen zu können.
 	& - \\
+	\hline
+\end{tabular}
+
+\newpage
+%\vspace{12px}
+
+\subsubsection{Mögliche Änderungen}
+Hier sind die möglichen Änderungen für die Anforderungen in diesem Unterkapitel.
+
+\vspace{6pt}
+
+\begin{tabular} {|p{4cm}|p{2,1cm}|p{8,7cm}|}
+	\hline
+	Anforderungen & Stabilität & Begründung \\
+	\hline
+	FA-501, FA-502
+	& 100\%
+	& Studenten sollen sich nicht selbst eintragen, die Anwesenheit soll nur vom Dozenten bestätigt werden. \\
+	\hline
+	FA-503, FA-505, FA-511
+	& 90\%
+	& Praktisch stabil, könnte jedoch durch Änderungen in der Benutzeroberfläche angepasst werden. \\
+	\hline
+	FA-504
+	& 90\%
+	& Praktisch stabil, könnte jedoch durch Änderungen in der Systemlogik angepasst werden. \\
+	\hline
+	FA-506
+	& 100\%
+	& Jede Anwesenheitsliste gehört notwendigerweise zu einem Termin. \\
+	\hline
+	FA-507, FA-508, FA-509, FA-510
+	& 100\%
+	& Grundfunktionalität, die stabil bleibt. \\
+	\hline
+	FA-512, FA-513
+	& 100\%
+	& Grundfunktionalität, die stabil bleibt. Die Bearbeitung muss möglich sein, da Entschuldigungen ja ggf. nachgereicht werden. \\
 	\hline
 \end{tabular}
 
@@ -744,6 +953,51 @@ Die Anwesenheitslisten sollten mit den Erzeugten Fehlzeiten übereinstimmen. Sow
 
 \newpage
 
+\subsubsection{Mögliche Änderungen}
+Hier sind die möglichen Änderungen für die Anforderungen in diesem Unterkapitel.
+
+\vspace{6pt}
+
+\begin{tabular} {|p{4cm}|p{2,1cm}|p{8,7cm}|}
+	\hline
+	Anforderungen & Stabilität & Begründung \\
+	\hline
+	FA-601, FA-608
+	& 100\%
+	& Diese Anforderung ist auch Ausfluss des Datenschutzes und bleibt stabil. \\
+	\hline
+	FA-602, FA-603, FA-606, FA-607, FA-609, FA-610, FA-612, FA-613, FA-614, FA-615, FA-618, FA-619, FA-620, FA-621, FA-623, FA-624, FA-625, FA-626, FA-627, FA-628, FA-630
+	& 100\%
+	& Grundfunktionalität, die stabil bleibt. \\
+	\hline
+	FA-604, FA-605
+	& 80\%
+	& Praktisch stabil, könnte jedoch durch Änderungen in der Benutzeroberfläche angepasst werden. \\
+	\hline
+	FA-611
+	& 100\%
+	& UX-Funktionalität, die stabil bleibt. \\
+	\hline
+	FA-616
+	& 60\%
+	& UI-Funktionalität, die sich aufgrund von Nutzerrückmeldungen ändern kann. \\
+	\hline
+	FA-617
+	& 70\%
+	& UI-Funktionalität, die sich aufgrund von Nutzerrückmeldungen ändern kann. \\
+	\hline
+	FA-622
+	& 40\%
+	& Eventuell wird die Auswertung auch in Echtzeit vorgenommen. \\
+	\hline
+	FA-629
+	& 80\%
+	& Grundfunktionalität, die stabil bleibt. Es müssen eventuell nicht alle Verwalter benachrichtigt werden. \\
+	\hline
+\end{tabular}
+
+\newpage
+
 \subsection{Benutzer verwalten}
 Die Anmeldedaten und Berechtigungen von Studenten, Dozenten und Verwalter, zusammengefasst die Benutzer des Systems, müssen verwaltet werden können.
 
@@ -817,10 +1071,6 @@ Sie müssen in der Lage sein, Benutzerkonten anzulegen, zu bearbeiten und wieder
 	ID & Anforderung & Kriterien \\
 	\hline
 	\printfreqnr
-	& Das System \textbf{MUSS} die Erstellung von Benutzerkonten innerhalb von 5 Sekunden nach Eingabe der erforderlichen Daten ermöglichen, um eine schnelle Einrichtung zu gewährleisten. 
-	& - \\ 
-	\hline
-	\printfreqnr
 	& Das System \textbf{SOLL} bei der Erstellung von Benutzerkonten eine SSL-verschlüsselte Verbindung verwenden, um die Sicherheit der Daten zu gewährleisten.
 	& - \\ 
 	\hline
@@ -833,23 +1083,11 @@ Sie müssen in der Lage sein, Benutzerkonten anzulegen, zu bearbeiten und wieder
 	& - \\ 
 	\hline
 	\printfreqnr
-	& Das System \textbf{MUSS} sicherstellen, dass Änderungen an Benutzerkonten entsprechend den Datenschutzrichtlinien protokolliert werden.
-	& - \\ 
-	\hline
-	\printfreqnr
 	& Das System \textbf{SOLL} eine benutzerfreundliche Schnittstelle zur Aktualisierung von Benutzerinformationen bieten, die ohne spezielle Schulung bedienbar ist.
 	& - \\ 
 	\hline
 	\printfreqnr
 	& Wenn ein Verwalter ein Benutzerkonto löschen möchte, \textbf{SOLL} das System eine Bestätigung einholen, um unbeabsichtigte Löschungen zu vermeiden.
-	& - \\ 
-	\hline
-	\printfreqnr
-	& Das System \textbf{MUSS} gelöschte Benutzerdaten gemäß den gesetzlichen Aufbewahrungsfristen speichern, bevor sie endgültig entfernt werden.
-	& - \\ 
-	\hline
-	\printfreqnr
-	& Das System \textbf{SOLL} regelmäßig Backups der Benutzerdaten erstellen, um Datenverlust bei einem Fehler zu verhindern.
 	& - \\ 
 	\hline
 	\printfreqnr
@@ -861,16 +1099,45 @@ Sie müssen in der Lage sein, Benutzerkonten anzulegen, zu bearbeiten und wieder
 	& - \\
 	\hline
 	\printfreqnr
-	& Das System \textbf{MUSS} einen sicheren Prozess für das Zurücksetzen von Passwörtern bieten, einschließlich der Bestätigung durch eine Zwei-Faktor-Authentifizierung. 
-	& - \\
-	\hline
-	\printfreqnr
-	& Das System \textbf{SOLL} in der Lage sein, das Zurücksetzen von Passwörtern innerhalb von 60 Sekunden durchzuführen. 
-	& - \\
-	\hline
-	\printfreqnr
 	& Das System \textbf{SOLL} bei der Passwortrücksetzung starke Passwörter gemäß den aktuellen Sicherheitsstandards erzwingen. 
 	& - \\
+	\hline
+\end{tabular}
+
+\newpage
+
+\subsubsection{Mögliche Änderungen}
+Hier sind die möglichen Änderungen für die Anforderungen in diesem Unterkapitel.
+
+\vspace{6pt}
+
+\begin{tabular} {|p{4cm}|p{2,1cm}|p{8,7cm}|}
+	\hline
+	Anforderungen & Stabilität & Begründung \\
+	\hline
+	FA-701, FA-702
+	& 100\%
+	& Diese Anforderung ist Ausdruck der grundlegenden Designentscheidung, Termine zentral über die Verwalter betreuen zu lassen. \\
+	\hline
+	FA-703, FA-709
+	& 100\%
+	& Grundlegende Sicherheitsanforderung, die stabil bleibt. \\
+	\hline
+	FA-704, FA-705, FA-706, FA-707, FA-708, FA-710, FA-711, FA-715
+	& 100\%
+	& Grundfunktionalität, die stabil bleibt. \\
+	\hline
+	FA-712, FA-714
+	& 100\%
+	& UX-Funktionalität, die stabil bleibt \\
+	\hline
+	FA-713
+	& 100\%
+	& Anforderung, um versehentliche Löschoperationen zu vermeiden. \\
+	\hline
+	FA-716
+	& 100\%
+	& Grundlegende Sicherheitsanforderung, welche aktuelle Standards abbildet \\
 	\hline
 \end{tabular}
 
@@ -937,6 +1204,37 @@ Da die Veranstaltungen lediglich als Muster dienen, haben die anderen Akteure ke
 \end{tabular}
 
 \newpage
+%\vspace{12px}
+
+\subsubsection{Mögliche Änderungen}
+Hier sind die möglichen Änderungen für die Anforderungen in diesem Unterkapitel.
+
+\vspace{6pt}
+
+\begin{tabular} {|p{4cm}|p{2,1cm}|p{8,7cm}|}
+	\hline
+	Anforderungen & Stabilität & Begründung \\
+	\hline
+	FA-801
+	& 100\%
+	& Grundfunktionalität, die stabil bleibt. \\
+	\hline
+	FA-802, FA-803, FA-804, FA-805
+	& 85\%
+	& Praktisch stabil, könnte jedoch durch Änderungen in der Benutzeroberfläche beeinflusst werden. \\
+	\hline
+	FA-806
+	& 90\%
+	& Sicherheitsanforderung, die stabil bleibt. \\
+	\hline
+	FA-807
+	& 100\%
+	& Grundlegende Sicherheitsanforderung, die stabil bleibt. \\
+	\hline
+\end{tabular}
+
+\newpage
+
 \subsection{Module verwalten}
 \begin{tabular} {|p{1,4cm}|p{10,7cm}|p{2,7cm}|}
 	\hline
@@ -955,10 +1253,6 @@ Da die Veranstaltungen lediglich als Muster dienen, haben die anderen Akteure ke
 	& - \\
 	\hline
 	\printfreqnr
-	& Das System \textbf{SOLL} eine Versionsgeschichte für jedes Modul führen, um Änderungen nachverfolgen und bei Bedarf frühere Versionen wiederherstellen zu können. 
-	& - \\
-	\hline
-	\printfreqnr
 	& Das System \textbf{SOLL} sicherstellen, dass Änderungen an Modulen keine negativen Auswirkungen auf die Kurszuordnung oder Stundenpläne haben. 
 	& - \\
 	\hline
@@ -968,10 +1262,6 @@ Da die Veranstaltungen lediglich als Muster dienen, haben die anderen Akteure ke
 	\hline
 	\printfreqnr
 	& Das System \textbf{MUSS} eine Bestätigung vom Benutzer einholen, bevor ein Modul endgültig entfernt wird, um unbeabsichtigte Löschungen zu verhindern. 
-	& - \\
-	\hline
-	\printfreqnr
-	& Das System \textbf{SOLL} entfernte Module in einem Archiv speichern, um eine eventuelle Wiederherstellung zu ermöglichen. 
 	& - \\
 	\hline
 	\printfreqnr
@@ -988,10 +1278,6 @@ Da die Veranstaltungen lediglich als Muster dienen, haben die anderen Akteure ke
 	\hline
 	\printfreqnr
 	& Das System \textbf{MUSS} den Akteuren eine Übersicht aller Module zur Verfügung stellen, einschließlich der Informationen zu beteiligten Dozenten und Veranstaltungen. 
-	& - \\
-	\hline
-	\printfreqnr
-	& Das System \textbf{MUSS} die Modulübersicht in Echtzeit aktualisieren, um jederzeit den aktuellen Stand wiedergeben zu können. 
 	& - \\
 	\hline
 	\printfreqnr
@@ -1017,6 +1303,47 @@ Da die Veranstaltungen lediglich als Muster dienen, haben die anderen Akteure ke
 	\printfreqnr
 	& Das System \textbf{MUSS} dafür sorgen, dass die Verfügbarkeit der Stundenplan- und Moduldaten jederzeit gewährleistet ist, um kontinuierlichen Zugriff für die Benutzer zu bieten. 
 	& - \\
+	\hline
+\end{tabular}
+
+\newpage
+
+\subsubsection{Mögliche Änderungen}
+Hier sind die möglichen Änderungen für die Anforderungen in diesem Unterkapitel.
+
+\vspace{6pt}
+
+\begin{tabular} {|p{4cm}|p{2,1cm}|p{8,7cm}|}
+	\hline
+	Anforderungen & Stabilität & Begründung \\
+	\hline
+	FA-901, FA-903, FA-905, FA-907, FA-908, FA-914
+	& 100\%
+	& Grundlegende Anforderung, die stabil bleibt. \\
+	\hline
+	FA-902, FA-904
+	& 100\%
+	& Grundlegende Anforderung zur Datenintegrität. \\
+	\hline
+	FA-906
+	& 100\%
+	& Anforderung, um versehentliche Löschoperationen zu vermeiden. \\
+	\hline
+	FA-909
+	& 75\%
+	& UX-Anforderung, bei der sich gegebenenfalls die Filterlogik und die filterbaren Parameter ändern. \\
+	\hline
+	FA-910
+	& 100\%
+	& Einfache  Anforderung, die stabil bleibt. \\
+	\hline
+	FA-911, FA-912
+	& 85\%
+	& Integritätsanforderung, welche stabil bleibt, könnte jedoch durch Änderungen in der Systemlogik beeinflusst werden. \\
+	\hline
+	FA-913
+	& 80\%
+	& Praktisch stabil, könnte jedoch durch Änderungen in der Benutzeroberfläche beeinflusst werden. \\
 	\hline
 \end{tabular}
 
