@@ -1,0 +1,143 @@
+%% Creator: Inkscape 1.3 (0e150ed6c4, 2023-07-21), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'Paketdiagramm_svg-tex.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{834bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,1.25989209)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{Paketdiagramm_svg-tex.pdf}}%
+    \put(0.0580036,1.23426259){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textbf{de.itc.stundenplan}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{Paketdiagramm_svg-tex.pdf}}%
+    \put(0.07598921,1.18929856){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textbf{contact}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{Paketdiagramm_svg-tex.pdf}}%
+    \put(0.09307554,1.14433453){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textbf{authorization}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{Paketdiagramm_svg-tex.pdf}}%
+    \put(0.09397482,0.57778777){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textbf{rest}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{Paketdiagramm_svg-tex.pdf}}%
+    \put(0.10746403,0.10116906){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textbf{user}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{Paketdiagramm_svg-tex.pdf}}%
+    \put(0.10746403,0.35296763){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textbf{termin}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{Paketdiagramm_svg-tex.pdf}}%
+    \put(0.10746403,0.16411871){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textbf{attendancelist}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{Paketdiagramm_svg-tex.pdf}}%
+    \put(0.10746403,0.29001799){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textbf{veranstaltung}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{Paketdiagramm_svg-tex.pdf}}%
+    \put(0.10746403,0.41591727){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textbf{module}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{Paketdiagramm_svg-tex.pdf}}%
+    \put(0.10746403,0.22706835){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textbf{absence}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{Paketdiagramm_svg-tex.pdf}}%
+    \put(0.10746403,0.54181655){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textbf{serialization}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{Paketdiagramm_svg-tex.pdf}}%
+    \put(0.10746403,0.47886691){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textbf{authentication}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=13]{Paketdiagramm_svg-tex.pdf}}%
+    \put(0.09307554,1.07239209){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textbf{gui}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=14]{Paketdiagramm_svg-tex.pdf}}%
+    \put(0.10746403,0.72167266){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textbf{user}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=15]{Paketdiagramm_svg-tex.pdf}}%
+    \put(0.10746403,0.97347122){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textbf{termin}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=16]{Paketdiagramm_svg-tex.pdf}}%
+    \put(0.10746403,0.7846223){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textbf{attendancelist}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=17]{Paketdiagramm_svg-tex.pdf}}%
+    \put(0.10746403,0.91052158){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textbf{veranstaltung}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=18]{Paketdiagramm_svg-tex.pdf}}%
+    \put(0.10746403,1.03642086){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textbf{module}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=19]{Paketdiagramm_svg-tex.pdf}}%
+    \put(0.10746403,0.84757194){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textbf{absence}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=20]{Paketdiagramm_svg-tex.pdf}}%
+    \put(0.10746403,0.65872302){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textbf{authentication}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=21]{Paketdiagramm_svg-tex.pdf}}%
+    \put(0.41771583,0.84757194){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textbf{business}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=22]{Paketdiagramm_svg-tex.pdf}}%
+    \put(0.43570144,0.55170863){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textbf{user}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=23]{Paketdiagramm_svg-tex.pdf}}%
+    \put(0.43570144,0.42580935){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textbf{termin}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=24]{Paketdiagramm_svg-tex.pdf}}%
+    \put(0.43570144,0.80350719){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textbf{attendancelist}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=25]{Paketdiagramm_svg-tex.pdf}}%
+    \put(0.43570144,0.67760791){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textbf{absence}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=26]{Paketdiagramm_svg-tex.pdf}}%
+    \put(0.43570144,0.48875899){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textbf{veranstaltung}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=27]{Paketdiagramm_svg-tex.pdf}}%
+    \put(0.43570144,0.61465827){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textbf{module}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=28]{Paketdiagramm_svg-tex.pdf}}%
+    \put(0.43570144,0.74055755){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textbf{authentication}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=29]{Paketdiagramm_svg-tex.pdf}}%
+    \put(0.62005396,0.60746403){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}<<access>>\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=30]{Paketdiagramm_svg-tex.pdf}}%
+    \put(0.29631295,0.60656475){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}<<access>>\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=31]{Paketdiagramm_svg-tex.pdf}}%
+    \put(0.75044964,0.94379496){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textbf{datasource}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=32]{Paketdiagramm_svg-tex.pdf}}%
+    \put(0.76933453,0.90242806){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textbf{ai}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=33]{Paketdiagramm_svg-tex.pdf}}%
+    \put(0.76993435,0.82688849){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textbf{persistence }\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=34]{Paketdiagramm_svg-tex.pdf}}%
+    \put(0.7846223,0.40872302){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textbf{mongodb}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=35]{Paketdiagramm_svg-tex.pdf}}%
+    \put(0.80260791,0.37365108){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textbf{attendancelist}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=36]{Paketdiagramm_svg-tex.pdf}}%
+    \put(0.7846223,0.78552158){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textbf{mysql}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=37]{Paketdiagramm_svg-tex.pdf}}%
+    \put(0.79991007,0.75134892){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textbf{termin}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=38]{Paketdiagramm_svg-tex.pdf}}%
+    \put(0.79991007,0.62365108){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textbf{user}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=39]{Paketdiagramm_svg-tex.pdf}}%
+    \put(0.79991007,0.68839928){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textbf{absence}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=40]{Paketdiagramm_svg-tex.pdf}}%
+    \put(0.79991007,0.48875899){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textbf{veranstaltung}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=41]{Paketdiagramm_svg-tex.pdf}}%
+    \put(0.79991007,0.56070144){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textbf{module}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=42]{Paketdiagramm_svg-tex.pdf}}%
+    \put(0.80260791,0.3080036){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textbf{connection}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=43]{Paketdiagramm_svg-tex.pdf}}%
+    \put(0.43570144,0.36196043){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textbf{mail}\end{tabular}}}}%
+  \end{picture}%
+\endgroup%
