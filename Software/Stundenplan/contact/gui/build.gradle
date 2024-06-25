@@ -1,0 +1,18 @@
+plugins {
+    id 'java'
+}
+
+group = 'de.itc.stundenplan.contact.gui'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation(project(':contact:authorization'))
+}
+
+test {
+    useJUnitPlatform()
+}

@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+group = 'de.itc.stundenplan.contact.rest'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compileOnly group: 'jakarta.ws.rs', name: 'jakarta.ws.rs-api', version: '4.0.0'
+
+    implementation(project(':contact:authorization'))
+    implementation(project(':business'))
+}
+
+test {
+    useJUnitPlatform()
+}

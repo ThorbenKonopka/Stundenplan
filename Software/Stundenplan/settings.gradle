@@ -1,0 +1,11 @@
+rootProject.name = 'Stundenplan'
+include 'contact'
+include 'contact:gui'
+findProject(':contact:gui')?.name = 'gui'
+include 'contact:rest'
+findProject(':contact:rest')?.name = 'rest'
+include 'contact:authorization'
+findProject(':contact:authorization')?.name = 'authorization'
+include 'business'
+include 'datasource'
+

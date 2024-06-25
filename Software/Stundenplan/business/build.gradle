@@ -1,0 +1,14 @@
+plugins {
+    id 'war'
+}
+
+group = 'de.itc.stundenplan.business'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation(project(':datasource'))
+}
